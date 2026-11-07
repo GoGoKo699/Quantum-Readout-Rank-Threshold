@@ -2,6 +2,14 @@
 
 This repository studies how many identical copies a fixed measurement must process jointly to retain a uniform fraction of local SLD quantum Fisher information.
 
+## Study route
+
+- Selected educational anchor and notation/source bridge: learning/ANCHOR.md
+- Complete common understanding map, M01–M30, with dependencies and source pointers: learning/MILESTONES.md
+- Reader entrypoint and focused routes: learning/README.md
+
+The single educational anchor is Sidhu and Kok, A Geometric Perspective on Quantum Parameter Estimation, AVS Quantum Science 2, 014701 (2020), arXiv:1907.06628v2. Its local estimation geometry motivates the problem; the project supplies the fixed-apparatus, design and Schur arguments. The shared map has 12 background and 18 narrative milestones. It records conceptual targets rather than a reader's assessment history.
+
 ## Read by question
 
 - Exact experiment, allowed apparatus and rank classification: science/model.md

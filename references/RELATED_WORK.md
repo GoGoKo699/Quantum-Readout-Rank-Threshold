@@ -88,3 +88,8 @@ Robert Koenig and John A. Smolin, **How to efficiently select an arbitrary Cliff
 ### GardnerEtAl26
 
 James W. Gardner, Federico Belliardo, Gideon Lee, Tuvia Gefen, and Liang Jiang, **Quantum superresolution and noise spectroscopy with quantum computing**, arXiv:2602.17862v1 (2026). [Preprint](https://arxiv.org/abs/2602.17862v1); [full text](https://arxiv.org/html/2602.17862v1). Relevant: Proposition 2, Table I, and the discussions of rank testing and constant working memory.
+
+## Educational anchor
+
+<a id="sk20"></a>
+**SK20.** Jasminder S. Sidhu and Pieter Kok, *A Geometric Perspective on Quantum Parameter Estimation*, AVS Quantum Science **2**, 014701 (2020), [DOI](https://doi.org/10.1116/1.5119961), [arXiv:1907.06628v2](https://arxiv.org/abs/1907.06628v2). This review supplies the classical and quantum information geometry used in the [educational bridge](../learning/ANCHOR.md). The project-specific collective readout, universal-apparatus quantifiers and Schur-sector converse are developed in the scientific account and attributed to their research sources above.

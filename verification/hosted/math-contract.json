@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 2,
+      "source_sha256": "3fba83a27ca6a89d5ee7537b2bc66fd139ca6f55f80e7a8a00fd67927274dcf2",
+      "required_text": [
+        "Ireadout",
+        "⪰",
+        "112",
+        "J2=2J"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 3,
+      "source_sha256": "3fd66064484837b2dbf9dca3b9c1d0b1b5aa6657f5c7b609a210c9320dbd4c79",
+      "required_text": [
+        "diag",
+        "0<p<η≤1/4"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 7,
+      "source_sha256": "dcd652def5e134dbab365d4f29e6dfbb206ab6db617554dc1a406fe6e4548035",
+      "required_text": [
+        "βk(η)",
+        "k−1",
+        "m−j"
+      ]
+    },
+    {
+      "path": "science/model.md",
+      "index": 26,
+      "source_sha256": "92129e7753ac3b468daf63cb8c45a920b92b39b38cdddf74dcd19b7627cf4414",
+      "required_text": [
+        "112",
+        "≥"
+      ]
+    },
+    {
+      "path": "science/singular-information.md",
+      "index": 15,
+      "source_sha256": "174cfa75768b9412041a286d8a6a7d3a7cb3f24bab215a7eb0b3fd8a04abea82",
+      "required_text": [
+        "lim",
+        "p↓0",
+        "Rk(η,p)",
+        "βk(η)",
+        "k−1"
+      ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 95,
+      "source_sha256": "a479389e5825d752bbc0237f1cc588991cce442f795f764d269fed326efac655",
+      "required_text": [
+        "Aη,k",
+        "σ0",
+        "k−1"
+      ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 60,
+      "source_sha256": "906a4a8298520a60d6b43f67d737b9cf2a8a3a3efafa839f07027c75d8107bf7",
+      "required_text": [
+        "Tr",
+        "ρ",
+        "L",
+        "≤"
+      ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 94,
+      "source_sha256": "df6787d1534f6aadcfdbdbc9366dfe9b0d67f7a8e0e8c4f41719c728b7b0faed",
+      "required_text": [
+        "Tr",
+        "ρ",
+        "L",
+        "≤"
+      ]
+    }
+  ]
+}

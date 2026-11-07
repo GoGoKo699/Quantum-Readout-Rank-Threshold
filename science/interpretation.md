@@ -32,8 +32,8 @@ For the qutrit family
 
 ```math
 \rho_{\eta,p,U}
-=U\operatorname{diag}(1-\eta-p,\eta,p)U^\dagger,
-\qquad 0<p\ll\eta,
+=U\mathrm{diag}(1-\eta-p,\eta,p)U^\dagger,
+\qquad 0\lt p\ll\eta,
 ```
 
 an eigenbasis measurement would observe the rare third component directly. Its information about $`p`$ is of order $`1/p`$. A universal apparatus cannot align to that component in advance.
@@ -50,7 +50,7 @@ A three-row sector requires all three eigenvector labels to occur among the copi
 
 For example, $`\beta_3=\eta(1-\eta)`$ and $`\beta_4=3\eta(1-\eta)`$. Dividing by $`k`$ gives the optimum worst-eigenbasis fraction of the leading singular information. The attaining binary Schur-sector test is independent of the eigenbasis.
 
-For fixed $`k`$, this fraction vanishes as $`\eta`$ tends to zero. For fixed $`\eta>0`$, larger blocks can recover an increasing fraction of this particular leading spectral information. These statements refer to the coefficient after taking $`p\downarrow0`$. They do not give a uniform sample requirement at finite $`p`$.
+For fixed $`k`$, this fraction vanishes as $`\eta`$ tends to zero. For fixed $`\eta\gt 0`$, larger blocks can recover an increasing fraction of this particular leading spectral information. These statements refer to the coefficient after taking $`p\downarrow0`$. They do not give a uniform sample requirement at finite $`p`$.
 
 ## The coherent block is the constrained resource
 
