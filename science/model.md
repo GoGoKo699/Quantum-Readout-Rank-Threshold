@@ -18,7 +18,7 @@ The positive results concern smooth fixed-rank models. Thus $`A`$ is Hermitian a
 The symmetric logarithmic derivative $`L`$ solves $`2A=\rho L+L\rho`$. Its value on the kernel is irrelevant. The single-copy SLD quantum Fisher information is
 
 ```math
-J_\rho(A)=\operatorname{Tr}(\rho L^2)
+J_\rho(A)=\mathrm{Tr}(\rho L^2)
 =\sum_{i,j:\lambda_i+\lambda_j>0}
 \frac{2|A_{ij}|^2}{\lambda_i+\lambda_j},
 ```
@@ -43,11 +43,11 @@ A block apparatus is a POVM $`M`$ on $`(\mathbb C^d)^{\otimes k}`$. Its outcomes
 
 The apparatus retains its classical random settings, success flags and readout outcomes. All input copies are charged, including attempts with an uninformative outcome. The apparatus is reset between blocks; a coherent memory that carries information from indefinitely many inputs is a different resource model.
 
-For a general outcome space, use the finite trace measure $`\nu(B)=\operatorname{Tr}M(B)`$. The density $`E_x=dM/d\nu`$ is positive with trace one almost everywhere. With
+For a general outcome space, use the finite trace measure $`\nu(B)=\mathrm{Tr}M(B)`$. The density $`E_x=dM/d\nu`$ is positive with trace one almost everywhere. With
 
 ```math
-q_\rho(x)=\operatorname{Tr}(E_x\rho^{\otimes k}),\qquad
-\dot q_\rho(x)=\operatorname{Tr}(E_x A^{(k)}),
+q_\rho(x)=\mathrm{Tr}(E_x\rho^{\otimes k}),\qquad
+\dot q_\rho(x)=\mathrm{Tr}(E_x A^{(k)}),
 ```
 
 the classical Fisher information of the full record is
@@ -98,7 +98,7 @@ Fix $`0<\eta\le1/4`$ and $`0<p<\eta`$, and define
 
 ```math
 \rho_{\eta,p,U}
-=U\operatorname{diag}(1-\eta-p,\eta,p)U^\dagger,
+=U\mathrm{diag}(1-\eta-p,\eta,p)U^\dagger,
 \qquad U\in U(3).
 ```
 

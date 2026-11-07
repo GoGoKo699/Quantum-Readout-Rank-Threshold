@@ -5,7 +5,7 @@ For the qutrit family
 ```math
 \rho_{p,U}
 =
-U\operatorname{diag}(1-\eta-p,\eta,p)U^\dagger,
+U\mathrm{diag}(1-\eta-p,\eta,p)U^\dagger,
 \qquad
 J(p)=\frac1p+\frac1{1-\eta-p},
 ```
@@ -71,10 +71,10 @@ Let $`\Pi_{\mathcal K_k}`$ project onto the sectors with three rows and set
 ```math
 w_k(p)
 =
-\operatorname{Tr}
+\mathrm{Tr}
 \!\left(
 \Pi_{\mathcal K_k}
-\operatorname{diag}(a-p,b,p)^{\otimes k}
+\mathrm{diag}(a-p,b,p)^{\otimes k}
 \right).
 ```
 

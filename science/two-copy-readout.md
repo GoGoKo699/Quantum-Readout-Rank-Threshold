@@ -11,7 +11,7 @@ The symmetry sectors and randomized-measurement primitives are established tools
 Let $`\rho`$ be a density matrix on $`\mathbb C^d`$. A regular rank-two tangent is a Hermitian derivative $`A=\partial_t\rho_t|_{t=0}`$ along a differentiable path whose rank is two in a neighborhood of zero. In particular,
 
 ```math
-\operatorname{Tr}A=0,\qquad
+\mathrm{Tr}A=0,\qquad
 P_{\ker\rho}A P_{\ker\rho}=0.
 ```
 
@@ -92,9 +92,9 @@ The resulting FI is $`I_3(\sigma;B)=D\mathbb E_\nu[z^2/r]`$, with the zero-proba
 ```math
 I_3(\sigma;B)
 \ge \frac{D+2}{D+1}
-\frac{(\operatorname{Tr}B^2)^2}
-{\operatorname{Tr}B^2+2\operatorname{Tr}(\sigma B^2)}
-\ge\frac13\operatorname{Tr}B^2.
+\frac{(\mathrm{Tr}B^2)^2}
+{\mathrm{Tr}B^2+2\mathrm{Tr}(\sigma B^2)}
+\ge\frac13\mathrm{Tr}B^2.
 ```
 
 If $`\sigma`$ is pure and $`B`$ is a pure-state tangent, then
@@ -110,17 +110,17 @@ I_3(\sigma;B)\ge\frac14J_\sigma(B).
 \ge\frac{(\mathbb E_\nu z^2)^2}{\mathbb E_\nu(z^2r)}.
 ```
 
-The second and third design moments, together with $`\operatorname{Tr}B=0`$ and $`\operatorname{Tr}\sigma=1`$, are
+The second and third design moments, together with $`\mathrm{Tr}B=0`$ and $`\mathrm{Tr}\sigma=1`$, are
 
 ```math
-\mathbb E_\nu z^2=\frac{\operatorname{Tr}B^2}{D(D+1)},
+\mathbb E_\nu z^2=\frac{\mathrm{Tr}B^2}{D(D+1)},
 \qquad
 \mathbb E_\nu(z^2r)=
-\frac{\operatorname{Tr}B^2+2\operatorname{Tr}(\sigma B^2)}
+\frac{\mathrm{Tr}B^2+2\mathrm{Tr}(\sigma B^2)}
 {D(D+1)(D+2)}.
 ```
 
-Substitution proves the first bound. Since $`0\preceq\sigma\preceq\mathbb I`$, the denominator is at most $`3\operatorname{Tr}B^2`$, proving the second.
+Substitution proves the first bound. Since $`0\preceq\sigma\preceq\mathbb I`$, the denominator is at most $`3\mathrm{Tr}B^2`$, proving the second.
 
 For a pure state, choose a phase convention in which
 
@@ -130,7 +130,7 @@ B=|v\rangle\langle\phi|+|\phi\rangle\langle v|,
 \qquad \langle\phi|v\rangle=0.
 ```
 
-Then $`\operatorname{Tr}B^2=2\|v\|^2`$, $`\operatorname{Tr}(\sigma B^2)=\|v\|^2`$, and $`J_\sigma(B)=4\|v\|^2`$. In fact the moment calculation gives
+Then $`\mathrm{Tr}B^2=2\|v\|^2`$, $`\mathrm{Tr}(\sigma B^2)=\|v\|^2`$, and $`J_\sigma(B)=4\|v\|^2`$. In fact the moment calculation gives
 
 ```math
 I_3(\sigma;B)
@@ -222,7 +222,7 @@ Y=\partial\tau_+
 A direct calculation yields
 
 ```math
-\operatorname{Tr}Y^2=
+\mathrm{Tr}Y^2=
 \frac{1}{s^2}\left[
 2a^2+4(1-2q)v
 +(4\lambda_1^2+2\lambda_2^2)t_1
@@ -257,7 +257,7 @@ The first term is the information in the binary flag. The other terms weight eac
 ```math
 I_{\mathcal M_d}
 \ge \frac{(q')^2}{qs}
-+\frac{s}{3}\operatorname{Tr}Y^2
++\frac{s}{3}\mathrm{Tr}Y^2
 +\frac{q}{4}J_W(\partial W).
 ```
 

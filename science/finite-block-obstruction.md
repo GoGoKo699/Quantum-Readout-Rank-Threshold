@@ -9,7 +9,7 @@ The [model](model.md) defines single-copy SLD quantum Fisher information $`J`$ a
 Fix a finite positive integer $`k`$. For $`0<\eta\le 1/4`$ and $`0<p<\eta`$, consider
 
 ```math
-\sigma_p=\operatorname{diag}(1-\eta-p,\eta,p),
+\sigma_p=\mathrm{diag}(1-\eta-p,\eta,p),
 \qquad
 \rho_{p,U}=U\sigma_pU^\dagger,
 \qquad U\in U(3).
@@ -100,7 +100,7 @@ At $`p=0`$, the state has rank two. Its tensor power vanishes on $`\mathcal K_k`
 For a nonzero positive effect $`E`$ in a regular sector, put
 
 ```math
-q_0(E,U)=\operatorname{Tr}\!\left(E\rho_{0,U}^{\otimes k}\right).
+q_0(E,U)=\mathrm{Tr}\!\left(E\rho_{0,U}^{\otimes k}\right).
 ```
 
 This function is positive for Haar-almost every $`U`$. To see why, the state block has the form $`R_\lambda(\sigma_0)\otimes I_{\mathcal P_\lambda}`$, with $`R_\lambda(\sigma_0)\ne0`$. Irreducibility gives
@@ -110,7 +110,7 @@ This function is positive for Haar-almost every $`U`$. To see why, the state blo
 U^{\otimes k}\Pi_\lambda\sigma_0^{\otimes k}
 \Pi_\lambda(U^\dagger)^{\otimes k}\,dU
 =
-\frac{\operatorname{Tr}R_\lambda(\sigma_0)}
+\frac{\mathrm{Tr}R_\lambda(\sigma_0)}
 {\dim\mathcal Q_\lambda}\,I_{\mathcal Q_\lambda\otimes\mathcal P_\lambda}.
 ```
 
@@ -123,7 +123,7 @@ The identity on the multiplicity space is essential here. An effect supported in
 Set $`a=1-\eta-p`$. In the eigenbasis of $`\rho_{p,U}`$, the single-copy SLD and the product-state SLD are
 
 ```math
-L_p=\operatorname{diag}(-1/a,0,1/p),
+L_p=\mathrm{diag}(-1/a,0,1/p),
 \qquad
 L_{k,p}=\sum_{i=1}^k L_p^{(i)}.
 ```
@@ -133,7 +133,7 @@ Conjugation by $`U^{\otimes k}`$ is understood when the eigenbasis is not fixed.
 ```math
 p\,\frac{(q_p'(E,U))^2}{q_p(E,U)}
 \le
-\operatorname{Tr}
+\mathrm{Tr}
 \!\left(E\,p\rho_{p,U}^{\otimes k}L_{k,p,U}^2\right).
 ```
 
@@ -163,7 +163,7 @@ In particular, an effect with trace one has a common integrable bound $`4k^2`$. 
 
 ## 3. Uniform convergence over regular effects
 
-In one regular sector, normalize positive effects to $`\operatorname{Tr}E=1`$ and define
+In one regular sector, normalize positive effects to $`\mathrm{Tr}E=1`$ and define
 
 ```math
 F_p(E)=
@@ -175,7 +175,7 @@ Then
 
 ```math
 \lim_{p\downarrow0}
-\sup_{E\ge0,\ \operatorname{Tr}E=1}F_p(E)=0.
+\sup_{E\ge0,\ \mathrm{Tr}E=1}F_p(E)=0.
 ```
 
 For a fixed effect this follows from the almost-everywhere positivity of $`q_0(E,U)`$ and dominated convergence. Uniformity also follows, and it is what permits spectrum-dependent apparatus designs.
@@ -197,7 +197,7 @@ This argument does not require the optimizing effects to converge without passin
 For a POVM $`M`$ on a finite-dimensional regular sector, define its trace measure
 
 ```math
-\mu(A)=\operatorname{Tr}M(A).
+\mu(A)=\mathrm{Tr}M(A).
 ```
 
 The operator-valued Radon–Nikodym density $`E_x=dM/d\mu`$ is positive and has trace one almost everywhere. Its trace measure has total mass equal to the sector dimension. Hence
@@ -220,7 +220,7 @@ On $`\mathcal K_k`$, completeness and the effectwise information bound imply
 ```math
 pI_{\mathcal K_k}
 \le
-\operatorname{Tr}
+\mathrm{Tr}
 \!\left(
 \Pi_{\mathcal K_k}\,
 p\rho_{p,U}^{\otimes k}L_{k,p,U}^2
@@ -241,11 +241,11 @@ A_{\eta,k}
 Convergence is in operator norm because the space is finite dimensional. Since the projector commutes with $`U^{\otimes k}`$, the trace of the limit is independent of $`U`$. Define
 
 ```math
-w_k(p)=\operatorname{Tr}
+w_k(p)=\mathrm{Tr}
 \!\left(\Pi_{\mathcal K_k}\sigma_p^{\otimes k}\right),
 \qquad
 \beta_k(\eta)=w_k'(0)
-=\operatorname{Tr}(\Pi_{\mathcal K_k}A_{\eta,k}).
+=\mathrm{Tr}(\Pi_{\mathcal K_k}A_{\eta,k}).
 ```
 
 The derivative identity follows because the other derivative terms replace one factor by $`-|1\rangle\langle1|`$. Those terms remain inside a two-dimensional one-particle support and are annihilated by $`\Pi_{\mathcal K_k}`$.
@@ -276,7 +276,7 @@ A single-copy analogue already rules out uniform efficiency on all mixed qubits.
 ```math
 \widetilde\rho_{p,U}
 =
-U\operatorname{diag}(1-p,p)U^\dagger,
+U\mathrm{diag}(1-p,p)U^\dagger,
 \qquad
 \widetilde J(p)=\frac1p+\frac1{1-p}.
 ```
@@ -288,7 +288,7 @@ The same compact-effect argument applies. Its dominating operator is particularl
 ```math
 p\,\widetilde\rho_{p,U}\widetilde L_{p,U}^2
 =
-U\operatorname{diag}\!\left(\frac{p}{1-p},1\right)U^\dagger
+U\mathrm{diag}\!\left(\frac{p}{1-p},1\right)U^\dagger
 \le I,
 \qquad 0<p\le\frac12.
 ```

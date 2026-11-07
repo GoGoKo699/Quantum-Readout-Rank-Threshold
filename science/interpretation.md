@@ -32,7 +32,7 @@ For the qutrit family
 
 ```math
 \rho_{\eta,p,U}
-=U\operatorname{diag}(1-\eta-p,\eta,p)U^\dagger,
+=U\mathrm{diag}(1-\eta-p,\eta,p)U^\dagger,
 \qquad 0<p\ll\eta,
 ```
 

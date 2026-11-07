@@ -1,0 +1,54 @@
+name: Hosted mathematics
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      TARGET_REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - name: Fetch the exact public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init source
+          git -C source remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          git -C source fetch --depth=1 origin "$TARGET_REVISION"
+          git -C source checkout --detach FETCH_HEAD
+          test "$(git -C source rev-parse HEAD)" = "$TARGET_REVISION"
+      - name: Install isolated browser dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          python3 --version
+          npm install --prefix "$RUNNER_TEMP/readout-browser" playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/readout-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Compare source and actual hosted mathematics
+        shell: bash
+        run: |
+          set -euo pipefail
+          export NODE_PATH="$RUNNER_TEMP/readout-browser/node_modules"
+          node source/verification/hosted/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE/source" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$TARGET_REVISION" \
+            --output "$GITHUB_WORKSPACE/hosted-evidence" \
+            --page README.md
+      - name: Retain the report and screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hosted-math-${{ github.run_id }}
+          path: hosted-evidence/
+          if-no-files-found: error
+          retention-days: 14
