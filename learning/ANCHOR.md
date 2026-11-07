@@ -176,14 +176,12 @@ P_-\rho^{\otimes2}P_-
 
 Its normalized state is pure and describes the occupied two-dimensional subspace. That connects a mixed input to the pure-state tangent formula above.
 
-```mermaid
-flowchart TD
-    A["Two input copies"] --> B["SWAP parity"]
-    B -->|Symmetric| C["3-design readout"]
-    B -->|Antisymmetric| D["3-design readout"]
-    C --> E["Flag, setting, outcome"]
-    D --> E
-```
+Each attempt starts with two input copies and measures SWAP parity. The subsequent readout and retained record are the same in both branches:
+
+| SWAP-parity branch | Readout on the full pair register | Retained record |
+|---|---|---|
+| Symmetric | Projective 3-design | Parity flag, setting and outcome |
+| Antisymmetric | Projective 3-design | Parity flag, setting and outcome |
 
 There are several kinds of information to retain. With $`A_{11}=a`$, $`A_{22}=-a`$, the one-copy metric separates as
 

@@ -61,6 +61,28 @@
         "σ0",
         "k−1"
       ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 60,
+      "source_sha256": "906a4a8298520a60d6b43f67d737b9cf2a8a3a3efafa839f07027c75d8107bf7",
+      "required_text": [
+        "Tr",
+        "ρ",
+        "L",
+        "≤"
+      ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 94,
+      "source_sha256": "df6787d1534f6aadcfdbdbc9366dfe9b0d67f7a8e0e8c4f41719c728b7b0faed",
+      "required_text": [
+        "Tr",
+        "ρ",
+        "L",
+        "≤"
+      ]
     }
   ]
 }

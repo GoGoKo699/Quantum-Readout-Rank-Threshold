@@ -133,8 +133,7 @@ Conjugation by $`U^{\otimes k}`$ is understood when the eigenbasis is not fixed.
 ```math
 p\,\frac{(q_p'(E,U))^2}{q_p(E,U)}
 \le
-\mathrm{Tr}
-\!\left(E\,p\rho_{p,U}^{\otimes k}L_{k,p,U}^2\right).
+\mathrm{Tr}[E\,p\rho_{p,U}^{\otimes k}L_{k,p,U}^2].
 ```
 
 A uniform operator bound controls the right-hand side. On a basis string with occupation counts $`n_a,n_\eta,n_p`$, the eigenvalue of $`p\sigma_p^{\otimes k}L_{k,p}^2`$ is
@@ -220,11 +219,7 @@ On $`\mathcal K_k`$, completeness and the effectwise information bound imply
 ```math
 pI_{\mathcal K_k}
 \le
-\mathrm{Tr}
-\!\left(
-\Pi_{\mathcal K_k}\,
-p\rho_{p,U}^{\otimes k}L_{k,p,U}^2
-\right).
+\mathrm{Tr}[\Pi_{\mathcal K_k}\,p\rho_{p,U}^{\otimes k}L_{k,p,U}^2].
 ```
 
 Only strings containing exactly one third eigenvector survive in the limit. In the diagonal basis, the limiting operator is
