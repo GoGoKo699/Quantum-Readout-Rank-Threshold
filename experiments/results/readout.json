@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "seed": 20261107,
+  "numpy_version": "2.3.5",
+  "scope": "Direct tensor checks in dimensions 2,3,4,7; exact-design moments and actual finite-design FI in dimension four, including complete pair readout for qubit inputs.",
+  "limitations": "No full finite-design pair-FI calculation for input dimension greater than two, no numerical proof of the universal theorem, no large Clifford-group enumeration, and no noise or estimator tests.",
+  "tolerances": {
+    "tensor_identity": 1e-08,
+    "design_moment": 1e-12,
+    "bound": 1e-10,
+    "zero_probability": 1e-14
+  },
+  "tensor_checks": {
+    "cases": 72,
+    "nonzero_wedge_qfi_cases": 36,
+    "input_dimensions": [
+      2,
+      3,
+      4,
+      7
+    ],
+    "smaller_eigenvalues": [
+      0.5,
+      0.2,
+      0.01,
+      1e-06
+    ],
+    "maximum_errors": {
+      "branch_probability_absolute": 1.1102230246251565e-16,
+      "branch_derivative_absolute": 1.3322676295501878e-15,
+      "antisymmetric_state_relative": 7.382375433877398e-11,
+      "antisymmetric_derivative_relative": 4.488590684451168e-16,
+      "nonzero_wedge_qfi_relative": 5.7926880678907023e-11,
+      "symmetric_hs_relative": 1.7766250826036373e-15,
+      "single_copy_qfi_relative": 3.3662887290120126e-10,
+      "certificate_relative": 7.250892724348071e-12
+    },
+    "minimum_certified_pair_qfi_fraction": 0.10416666666666659,
+    "required_fraction": 0.08333333333333333,
+    "minimum_case": {
+      "dimension": 7,
+      "lambda2": 0.5,
+      "tangent": "external_1"
+    },
+    "zero_wedge_note": "Exactly zero wedge tangents are checked through the unnormalized derivative identity before division by the branch probability."
+  },
+  "finite_design_moments": {
+    "dimension": 4,
+    "projectors": 60,
+    "moment_frobenius_residuals": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 1.3877787807814457e-17
+    }
+  },
+  "finite_pair_fi": {
+    "input_dimension": 2,
+    "pair_design_dimension": 4,
+    "rank_two_cases": 24,
+    "pure_tangent_cases": 2,
+    "minimum_rank_two_pair_qfi_fraction": 0.2444444444444444,
+    "required_rank_two_fraction": 0.08333333333333333,
+    "minimum_pure_pair_qfi_fraction": 0.3333333333333333,
+    "required_pure_fraction": 0.25,
+    "zero_probability_outcomes_checked": 520
+  },
+  "finite_pure_design_fi": {
+    "dimension": 4,
+    "cases": 8,
+    "minimum_qfi_fraction": 0.33333333333333326,
+    "required_fraction": 0.25
+  }
+}

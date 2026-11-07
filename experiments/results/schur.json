@@ -1,0 +1,396 @@
+{
+  "all_passed": true,
+  "arithmetic": "Exact fractions; no floating-point tolerance.",
+  "schur_case_count": 30,
+  "projector_case_count": 12,
+  "checks": [
+    "Full three-variable Jacobi-Trudi weights sum to one and derivatives sum to zero.",
+    "All three-row weights vanish at p=0; their derivative equals the suffix formula.",
+    "The positive homogeneous-polynomial formula and determinant-factor formula agree.",
+    "The stated k=3,4,5,6 polynomials and the positive coefficient bound hold.",
+    "Explicit k=3,4 permutation-character projectors agree at boundary and positive p."
+  ],
+  "scope": "Finite coefficient and normalization checks only; not a numerical proof of the all-POVM bound or a simultaneous-limit rate.",
+  "schur_cases": [
+    {
+      "k": 1,
+      "eta": "1/1000",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 1,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 2,
+      "eta": "1/1000",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 2,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 3,
+      "eta": "1/1000",
+      "beta": "999/1000000",
+      "beta_over_k": "333/1000000",
+      "schur_sectors": 3,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 4,
+      "eta": "1/1000",
+      "beta": "2997/1000000",
+      "beta_over_k": "2997/4000000",
+      "schur_sectors": 4,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 5,
+      "eta": "1/1000",
+      "beta": "5993001999/1000000000000",
+      "beta_over_k": "5993001999/5000000000000",
+      "schur_sectors": 5,
+      "three_row_sectors": 2,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 6,
+      "eta": "1/1000",
+      "beta": "2496501999/250000000000",
+      "beta_over_k": "832167333/500000000000",
+      "schur_sectors": 7,
+      "three_row_sectors": 3,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 7,
+      "eta": "1/1000",
+      "beta": "14975020987002999/1000000000000000000",
+      "beta_over_k": "14975020987002999/7000000000000000000",
+      "schur_sectors": 8,
+      "three_row_sectors": 4,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 8,
+      "eta": "1/1000",
+      "beta": "4191808993002999/200000000000000000",
+      "beta_over_k": "4191808993002999/1600000000000000000",
+      "schur_sectors": 10,
+      "three_row_sectors": 5,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 9,
+      "eta": "1/1000",
+      "beta": "27937084919048979003999/1000000000000000000000000",
+      "beta_over_k": "3104120546560997667111/1000000000000000000000000",
+      "schur_sectors": 12,
+      "three_row_sectors": 7,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 10,
+      "eta": "1/1000",
+      "beta": "17954073416564464511997/500000000000000000000000",
+      "beta_over_k": "17954073416564464511997/5000000000000000000000000",
+      "schur_sectors": 14,
+      "three_row_sectors": 8,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 1,
+      "eta": "1/10",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 1,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 2,
+      "eta": "1/10",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 2,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 3,
+      "eta": "1/10",
+      "beta": "9/100",
+      "beta_over_k": "3/100",
+      "schur_sectors": 3,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 4,
+      "eta": "1/10",
+      "beta": "27/100",
+      "beta_over_k": "27/400",
+      "schur_sectors": 4,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 5,
+      "eta": "1/10",
+      "beta": "5319/10000",
+      "beta_over_k": "5319/50000",
+      "schur_sectors": 5,
+      "three_row_sectors": 2,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 6,
+      "eta": "1/10",
+      "beta": "2169/2500",
+      "beta_over_k": "723/5000",
+      "schur_sectors": 7,
+      "three_row_sectors": 3,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 7,
+      "eta": "1/10",
+      "beta": "1269729/1000000",
+      "beta_over_k": "1269729/7000000",
+      "schur_sectors": 8,
+      "three_row_sectors": 4,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 8,
+      "eta": "1/10",
+      "beta": "346329/200000",
+      "beta_over_k": "346329/1600000",
+      "schur_sectors": 10,
+      "three_row_sectors": 5,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 9,
+      "eta": "1/10",
+      "beta": "224736939/100000000",
+      "beta_over_k": "24970771/100000000",
+      "schur_sectors": 12,
+      "three_row_sectors": 7,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 10,
+      "eta": "1/10",
+      "beta": "140576067/50000000",
+      "beta_over_k": "140576067/500000000",
+      "schur_sectors": 14,
+      "three_row_sectors": 8,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 1,
+      "eta": "1/4",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 1,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 2,
+      "eta": "1/4",
+      "beta": "0",
+      "beta_over_k": "0",
+      "schur_sectors": 2,
+      "three_row_sectors": 0,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 3,
+      "eta": "1/4",
+      "beta": "3/16",
+      "beta_over_k": "1/16",
+      "schur_sectors": 3,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 4,
+      "eta": "1/4",
+      "beta": "9/16",
+      "beta_over_k": "9/64",
+      "schur_sectors": 4,
+      "three_row_sectors": 1,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 5,
+      "eta": "1/4",
+      "beta": "279/256",
+      "beta_over_k": "279/1280",
+      "schur_sectors": 5,
+      "three_row_sectors": 2,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 6,
+      "eta": "1/4",
+      "beta": "111/64",
+      "beta_over_k": "37/128",
+      "schur_sectors": 7,
+      "three_row_sectors": 3,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 7,
+      "eta": "1/4",
+      "beta": "10107/4096",
+      "beta_over_k": "10107/28672",
+      "schur_sectors": 8,
+      "three_row_sectors": 4,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 8,
+      "eta": "1/4",
+      "beta": "13383/4096",
+      "beta_over_k": "13383/32768",
+      "schur_sectors": 10,
+      "three_row_sectors": 5,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 9,
+      "eta": "1/4",
+      "beta": "269823/65536",
+      "beta_over_k": "89941/196608",
+      "schur_sectors": 12,
+      "three_row_sectors": 7,
+      "all_exact_comparisons_passed": true
+    },
+    {
+      "k": 10,
+      "eta": "1/4",
+      "beta": "163989/32768",
+      "beta_over_k": "163989/327680",
+      "schur_sectors": 14,
+      "three_row_sectors": 8,
+      "all_exact_comparisons_passed": true
+    }
+  ],
+  "projector_cases": [
+    {
+      "k": 3,
+      "eta": "1/1000",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "999/1000000",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 3,
+      "eta": "1/1000",
+      "p": "1/3000",
+      "probability": "749/2250000000",
+      "p_derivative": "599/600000",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/1000",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "2997/1000000",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/1000",
+      "p": "1/3000",
+      "probability": "749/750000000",
+      "p_derivative": "599/200000",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 3,
+      "eta": "1/10",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "9/100",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 3,
+      "eta": "1/10",
+      "p": "1/30",
+      "probability": "13/4500",
+      "p_derivative": "1/12",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/10",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "27/100",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/10",
+      "p": "1/30",
+      "probability": "13/1500",
+      "p_derivative": "1/4",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 3,
+      "eta": "1/4",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "3/16",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 3,
+      "eta": "1/4",
+      "p": "1/12",
+      "probability": "1/72",
+      "p_derivative": "7/48",
+      "permutations_summed": 6,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/4",
+      "p": "0",
+      "probability": "0",
+      "p_derivative": "9/16",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    },
+    {
+      "k": 4,
+      "eta": "1/4",
+      "p": "1/12",
+      "probability": "1/24",
+      "p_derivative": "7/16",
+      "permutations_summed": 24,
+      "character_and_schur_agree": true
+    }
+  ]
+}
