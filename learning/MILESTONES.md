@@ -8,7 +8,7 @@ The allocation gives twelve milestones to the language shared by both proofs and
 
 The single educational anchor is Jasminder S. Sidhu and Pieter Kok, [*A Geometric Perspective on Quantum Parameter Estimation*][sk], *AVS Quantum Science* **2**, 014701 (2020). Section and equation numbers below refer to **arXiv:1907.06628v2**. The anchor supplies the geometric and statistical framework. The linked science pages supply the project-specific design bounds, exterior-square mechanism, Schur-sector arguments and limit statements. Those research ingredients are not presented as results of the anchor.
 
-The notation follows the [model](../science/model.md): $`\rho`$ is a state, $`A`$ is a local state derivative, $`M`$ is a measurement, $`I_M`$ is its classical Fisher information, and $`J_\rho(A)`$ is the single-copy SLD quantum Fisher information in direction $`A`$. A block contains $`k`$ independent copies, so its quantum information is $`kJ_\rho(A)`$.
+The notation follows the [model](../science/model.md): $`\rho`$ is a state, $`A`$ is a local state derivative, $`M`$ is a measurement, $`I_M`$ is its classical Fisher information, and $`J_\rho(A)`$ is the single-copy SLD quantum Fisher information in direction $`A`$. A block contains $`k`$ independent copies, so its quantum information is $`kJ_\rho(A)`$. The [notation bridge](ANCHOR.md#notation-translation) translates the anchor's symbols into these conventions.
 
 ## Phase I: Background/preliminaries, M01–M12
 
@@ -144,7 +144,7 @@ Its kernel values do not affect the information. A measurement's classical Fishe
 
 **Central question.** How can a finite measurement retain the useful averages of an isotropic random readout?
 
-**Understanding target.** Haar averaging supplies a basis-independent reference ensemble. A projective 3-design is a finite ensemble whose first three projector moments equal those Haar moments. Those moments can control an information inequality without requiring a continuously sampled measurement. The chosen setting remains part of the observed record.
+**Understanding target.** Haar averaging supplies a basis-independent reference ensemble. A finite projective 3-design has first three projector moments equal to those Haar moments. Those moments can control an information inequality without requiring a continuously sampled measurement. The chosen setting remains part of the observed record.
 
 **Dependencies and story role.** Uses M03–M06 and M08. It supplies the randomized measurement ingredient and explains why a finite physical apparatus can realize the needed symmetry.
 
@@ -331,7 +331,7 @@ The varying parameter is $`p`$; $`\eta`$ and the eigenbasis $`U`$ are fixed. Its
 \preceq4k^2\mathbb I.
 ```
 
-This supplies a common dominating constant for trace-one effects. Positive regular-sector boundary probability then makes their leading $`1/p`$ coefficient vanish.
+This supplies a common dominating constant for trace-one effects. Positive regular-sector boundary probability then makes the leading $`1/p`$ coefficient vanish for each fixed regular effect.
 
 **Dependencies and story role.** Uses M05, M08 and M20–M22. It turns a support observation into a controlled information limit.
 

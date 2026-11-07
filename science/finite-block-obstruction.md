@@ -235,7 +235,7 @@ A_{\eta,k}
 \sum_{i=1}^k
 \bigl(|3\rangle\langle3|\bigr)_i
 \otimes
-\sigma_0^{\otimes(k-1)}_{\{1,\ldots,k\}\setminus\{i\}}.
+\bigl(\sigma_0^{\otimes(k-1)}\bigr)_{\{1,\ldots,k\}\setminus\{i\}}.
 ```
 
 Convergence is in operator norm because the space is finite dimensional. Since the projector commutes with $`U^{\otimes k}`$, the trace of the limit is independent of $`U`$. Define

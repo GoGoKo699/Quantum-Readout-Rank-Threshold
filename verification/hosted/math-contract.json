@@ -51,6 +51,16 @@
         "βk(η)",
         "k−1"
       ]
+    },
+    {
+      "path": "science/finite-block-obstruction.md",
+      "index": 95,
+      "source_sha256": "a479389e5825d752bbc0237f1cc588991cce442f795f764d269fed326efac655",
+      "required_text": [
+        "Aη,k",
+        "σ0",
+        "k−1"
+      ]
     }
   ]
 }
