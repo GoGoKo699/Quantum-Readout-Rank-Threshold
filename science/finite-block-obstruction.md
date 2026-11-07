@@ -6,7 +6,7 @@ The [model](model.md) defines single-copy SLD quantum Fisher information $`J`$ a
 
 ## Statement and measurement dependence
 
-Fix a finite positive integer $`k`$. For $`0<\eta\le 1/4`$ and $`0<p<\eta`$, consider
+Fix a finite positive integer $`k`$. For $`0\lt \eta\le 1/4`$ and $`0\lt p\lt \eta`$, consider
 
 ```math
 \sigma_p=\mathrm{diag}(1-\eta-p,\eta,p),
@@ -185,7 +185,7 @@ Suppose uniform convergence failed. There would be $`p_j\downarrow0`$ and normal
 For Haar-almost every $`U`$,
 
 ```math
-q_{p_j}(E_j,U)\longrightarrow q_0(E_*,U)>0.
+q_{p_j}(E_j,U)\longrightarrow q_0(E_*,U)\gt 0.
 ```
 
 The derivative remains bounded in operator norm: $`\|\partial_p\rho_{p,U}^{\otimes k}\|\le k`$, so $`|q_p'(E,U)|\le k`$ for normalized effects. The integrand therefore tends to zero almost everywhere. The preceding bound $`4k^2`$ applies to the entire subsequence. Dominated convergence gives $`F_{p_j}(E_j)\to0`$, a contradiction.
@@ -290,7 +290,7 @@ p\,\widetilde\rho_{p,U}\widetilde L_{p,U}^2
 =
 U\mathrm{diag}\!\left(\frac{p}{1-p},1\right)U^\dagger
 \le I,
-\qquad 0<p\le\frac12.
+\qquad 0\lt p\le\frac12.
 ```
 
 Thus

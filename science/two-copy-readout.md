@@ -21,7 +21,7 @@ For a POVM with outcome probability density $`p_t(y)`$, the classical Fisher inf
 
 ```math
 I_{\mathcal M}(\rho;A)
-=\int_{p_0(y)>0}\frac{[\partial_t p_t(y)|_{t=0}]^2}{p_0(y)}\,dy.
+=\int_{p_0(y)\gt 0}\frac{[\partial_t p_t(y)|_{t=0}]^2}{p_0(y)}\,dy.
 ```
 
 The notation also covers discrete outcomes, for which the integral is a sum. A zero-probability outcome with zero first derivative contributes zero. This is the ordinary local Fisher information at the specified state, rather than a limit taken through a rank-changing model.
@@ -30,7 +30,7 @@ For $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$, the SLD quantum Fisher informat
 
 ```math
 J_\rho(A)=
-2\sum_{i,j:\lambda_i+\lambda_j>0}
+2\sum_{i,j:\lambda_i+\lambda_j\gt 0}
 \frac{|A_{ij}|^2}{\lambda_i+\lambda_j}.
 ```
 
@@ -147,7 +147,7 @@ Diagonalize the state only for the proof:
 ```math
 \rho=\lambda_1|1\rangle\langle1|
 +\lambda_2|2\rangle\langle2|,
-\qquad \lambda_1,\lambda_2>0,\quad\lambda_1+\lambda_2=1.
+\qquad \lambda_1,\lambda_2\gt 0,\quad\lambda_1+\lambda_2=1.
 ```
 
 Set
@@ -157,7 +157,7 @@ q=\lambda_1\lambda_2,\qquad s=1-q,
 \qquad
 A_{11}=a,\quad A_{22}=-a,\quad
 v=|A_{12}|^2,\quad
-t_i=\sum_{k>2}|A_{ik}|^2.
+t_i=\sum_{k\gt 2}|A_{ik}|^2.
 ```
 
 The letters $`q`$ and $`s`$ denote the antisymmetric and symmetric probabilities. The one-copy information becomes
@@ -188,8 +188,8 @@ The normalized conditional state $`W=\sigma_-/q`$ is pure. The component of its 
 
 ```math
 |\dot w\rangle_\perp=
-\sum_{k>2}\frac{A_{k1}}{\lambda_1}|k\wedge2\rangle
-+\sum_{k>2}\frac{A_{k2}}{\lambda_2}|1\wedge k\rangle.
+\sum_{k\gt 2}\frac{A_{k1}}{\lambda_1}|k\wedge2\rangle
++\sum_{k\gt 2}\frac{A_{k2}}{\lambda_2}|1\wedge k\rangle.
 ```
 
 These wedge vectors are mutually orthogonal. It follows that
@@ -239,7 +239,7 @@ For completeness, the matrix entries responsible for this expression are as foll
 \lambda_2-\lambda_1\bigr).
 ```
 
-Their squared sum is $`2a^2/s^2`$. The internal derivative connects $`|12;+\rangle`$ to $`|11\rangle`$ and $`|22\rangle`$ with magnitudes $`\sqrt2\lambda_1|A_{12}|/s`$ and $`\sqrt2\lambda_2|A_{12}|/s`$. For each $`k>2`$, the $`A_{1k}`$ derivative connects $`|11\rangle`$ to $`|1k;+\rangle`$ and $`|12;+\rangle`$ to $`|2k;+\rangle`$ with magnitudes $`\sqrt2\lambda_1|A_{1k}|/s`$ and $`\lambda_2|A_{1k}|/s`$. Interchanging 1 and 2 gives the remaining entries. Each off-diagonal entry and its adjoint contribute twice its squared magnitude. These matrix positions are distinct, so the Hilbert–Schmidt norm has no cross terms between the listed components.
+Their squared sum is $`2a^2/s^2`$. The internal derivative connects $`|12;+\rangle`$ to $`|11\rangle`$ and $`|22\rangle`$ with magnitudes $`\sqrt2\lambda_1|A_{12}|/s`$ and $`\sqrt2\lambda_2|A_{12}|/s`$. For each $`k\gt 2`$, the $`A_{1k}`$ derivative connects $`|11\rangle`$ to $`|1k;+\rangle`$ and $`|12;+\rangle`$ to $`|2k;+\rangle`$ with magnitudes $`\sqrt2\lambda_1|A_{1k}|/s`$ and $`\lambda_2|A_{1k}|/s`$. Interchanging 1 and 2 gives the remaining entries. Each off-diagonal entry and its adjoint contribute twice its squared magnitude. These matrix positions are distinct, so the Hilbert–Schmidt norm has no cross terms between the listed components.
 
 ## Proof of the uniform fraction
 
@@ -268,7 +268,7 @@ For the eigenvalue derivative, the coefficient ratio is
 ```math
 R_a(q)=\frac{1-4q+2q/3}{1-q}
 =\frac{1-10q/3}{1-q}\ge\frac29,
-\qquad 0<q\le\frac14.
+\qquad 0\lt q\le\frac14.
 ```
 
 Indeed, $`R_a(q)-2/9=7(1-4q)/[9(1-q)]`$. For the internal direction, the ratio is
@@ -294,8 +294,8 @@ The last summand in the first expression is the probability-weighted information
 ```math
 R_{\mathrm{ext}}(\lambda)-\frac16
 =\frac{(\lambda+1)(3\lambda^2-3\lambda+1)}
-{12(\lambda^2-\lambda+1)}>0,
-\qquad 0<\lambda<1.
+{12(\lambda^2-\lambda+1)}\gt 0,
+\qquad 0\lt \lambda\lt 1.
 ```
 
 Every component is therefore at least one sixth of its one-copy QFI. Since the components have no cross terms,

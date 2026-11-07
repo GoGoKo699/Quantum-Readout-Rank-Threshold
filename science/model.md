@@ -19,7 +19,7 @@ The symmetric logarithmic derivative $`L`$ solves $`2A=\rho L+L\rho`$. Its value
 
 ```math
 J_\rho(A)=\mathrm{Tr}(\rho L^2)
-=\sum_{i,j:\lambda_i+\lambda_j>0}
+=\sum_{i,j:\lambda_i+\lambda_j\gt 0}
 \frac{2|A_{ij}|^2}{\lambda_i+\lambda_j},
 ```
 
@@ -54,7 +54,7 @@ the classical Fisher information of the full record is
 
 ```math
 I_M(\rho;A)
-=\int_{\{q_\rho>0\}}
+=\int_{\{q_\rho\gt 0\}}
 \frac{\dot q_\rho(x)^2}{q_\rho(x)}\,d\nu(x).
 ```
 
@@ -66,7 +66,7 @@ A universal fraction means
 I_M(\rho;A)\ge c\,kJ_\rho(A)
 ```
 
-for all states and regular tangents in the stated class, where $`c>0`$ does not depend on the unknown spectrum, eigenbasis or tangent. A directional inequality for every real $`u`$ is equivalent to the matrix inequality $`I_M\succeq ckJ`$. This simultaneous matrix comparison is stronger than optimizing a measurement separately for one specified parameter direction.
+for all states and regular tangents in the stated class, where $`c\gt 0`$ does not depend on the unknown spectrum, eigenbasis or tangent. A directional inequality for every real $`u`$ is equivalent to the matrix inequality $`I_M\succeq ckJ`$. This simultaneous matrix comparison is stronger than optimizing a measurement separately for one specified parameter direction.
 
 The constructive apparatus depends only on the known Hilbert-space dimension. The converse allows more: its POVM may be chosen using the exact nominal spectrum. That choice is held fixed when the local statistical derivative is taken. Differentiating the apparatus itself would describe a different experiment.
 
@@ -94,7 +94,7 @@ The [complete proof](two-copy-readout.md) derives the design moment inequality a
 
 ## 4. The finite-block obstruction
 
-Fix $`0<\eta\le1/4`$ and $`0<p<\eta`$, and define
+Fix $`0\lt \eta\le1/4`$ and $`0\lt p\lt \eta`$, and define
 
 ```math
 \rho_{\eta,p,U}

@@ -43,7 +43,7 @@ jobs:
             --repository "$GITHUB_REPOSITORY" \
             --revision "$TARGET_REVISION" \
             --output "$GITHUB_WORKSPACE/hosted-evidence" \
-            --page README.md
+            --contract "$GITHUB_WORKSPACE/source/verification/hosted/math-contract.json"
       - name: Retain the report and screenshots
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

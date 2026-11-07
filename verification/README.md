@@ -46,3 +46,25 @@ The [recorded result](../experiments/results/schur.json) contains 30 Schur cases
 These computations test formulas on which the analytical comparison depends. They do not prove compactness, almost-everywhere positivity, dominated convergence, or an assertion uniform over all POVMs. Those steps remain explicit in the written converse.
 
 The checks do not establish noise robustness, classical estimation complexity, or a simultaneous finite-$`p`$ scaling law. The small-system finite-design information is a diagnostic of the stated apparatus, not a numerical claim of optimality.
+
+## Hosted mathematical display
+
+The [read-only workflow](../.github/workflows/hosted-math.yml) checks commit-pinned GitHub pages in an anonymous Chromium browser at widths 1440 and 760. The [collector](hosted/capture_hosted_math.cjs) reads the source from Git objects, compiles each formula with MathJax, and compares its symbols and structure against the actual hosted MathML. It includes inline formulas, displays and table cells. A source-bound content contract also protects the headline constants, the strict spectral domain and the exact limiting coefficient. The [text and relation checker](hosted/check_rendered_math.py) checks source identity, counts, relations and any supplied content contract.
+
+To reproduce a complete capture with Node.js 18 or newer, Python 3.10 or newer, and Git, use an isolated dependency directory outside this repository:
+
+```bash
+npm install --prefix /tmp/readout-browser playwright@1.56.1 mathjax-full@3.2.1
+/tmp/readout-browser/node_modules/.bin/playwright install chromium
+export NODE_PATH=/tmp/readout-browser/node_modules
+node verification/hosted/capture_hosted_math.cjs \
+  --root "$PWD" \
+  --repository GoGoKo699/Quantum-Readout-Rank-Threshold \
+  --revision "$(git rev-parse HEAD)" \
+  --output /tmp/readout-hosted-evidence \
+  --contract verification/hosted/math-contract.json
+```
+
+The output directory must be new or empty. The default scope includes every tracked Markdown page at the supplied revision. The report records exact source hashes, page and expression counts, runtime versions, failures, screenshots and artifact hashes. A failed capture remains a failed capture; a source parser or successful numerical run cannot replace it.
+
+Inspect the saved screenshots as well as the automated report. Structural comparison checks mathematical content within the supported parser and browser; visual review checks layout and legibility. Neither verifies the scientific proofs, all browser versions or future hosting behavior. GitHub Actions artifacts are temporary diagnostic records, not a permanent archive.

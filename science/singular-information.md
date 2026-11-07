@@ -12,7 +12,7 @@ J(p)=\frac1p+\frac1{1-\eta-p},
 
 the [finite-block proof](finite-block-obstruction.md) shows that only the three-row Schur sectors retain a leading $`1/p`$ contribution after an unknown eigenbasis is taken into account. This page computes that contribution exactly.
 
-Keep $`k`$ and $`0<\eta\le1/4`$ fixed while $`p\downarrow0`$. Write
+Keep $`k`$ and $`0\lt \eta\le1/4`$ fixed while $`p\downarrow0`$. Write
 
 ```math
 a=1-\eta,\qquad b=\eta,\qquad q=ab.
@@ -198,7 +198,7 @@ w_k(p)=\beta_k(\eta)p+O(p^2),
 w_k'(p)=\beta_k(\eta)+O(p),
 ```
 
-with $`\beta_k(\eta)>0`$. Its Fisher information is therefore
+with $`\beta_k(\eta)\gt 0`$. Its Fisher information is therefore
 
 ```math
 I_{\mathrm{binary}}(p)
@@ -214,10 +214,10 @@ The binary rank certificate is consequently optimal for the leading singular coe
 
 ## 4. Consequence for uniform rank-three readout
 
-The probability interpretation gives $`0<h_j(a,b)\le1`$. Hence for $`k\ge3`$,
+The probability interpretation gives $`0\lt h_j(a,b)\le1`$. Hence for $`k\ge3`$,
 
 ```math
-0<\beta_k(\eta)
+0\lt \beta_k(\eta)
 \le
 q\,\frac{(k-1)(k-2)}2.
 ```
@@ -240,7 +240,7 @@ R_k(\eta,p)=0
 \text{for every fixed finite }k.
 ```
 
-Growing the block at a fixed second eigenvalue gives a different limit. For fixed $`0<\eta\le1/4`$, the generating function implies
+Growing the block at a fixed second eigenvalue gives a different limit. For fixed $`0\lt \eta\le1/4`$, the generating function implies
 
 ```math
 \sum_{m=0}^{\infty}h_m(a,b)
@@ -252,7 +252,7 @@ Since $`\beta_k=k-\sum_{m=0}^{k-1}h_m`$, this yields
 
 ```math
 \lim_{k\to\infty}\lim_{p\downarrow0}R_k(\eta,p)=1
-\qquad\text{for every fixed }0<\eta\le1/4.
+\qquad\text{for every fixed }0\lt \eta\le1/4.
 ```
 
 An increasing block can therefore recover the full leading singular coefficient at a fixed second eigenvalue. A fixed block loses its uniform fraction when that second eigenvalue also becomes small.

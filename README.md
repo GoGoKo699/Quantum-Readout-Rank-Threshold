@@ -32,7 +32,7 @@ For the unknown-basis qutrit family
 ```math
 \rho_{\eta,p,U}
 =U\mathrm{diag}(1-\eta-p,\eta,p)U^\dagger,
-\qquad 0<p<\eta\le1/4,
+\qquad 0\lt p\lt \eta\le1/4,
 ```
 
 consider information about the rare eigenvalue $`p`$. The converse permits every POVM on a fixed finite block of $`k`$ copies, including continuous outcomes and knowledge of the nominal spectrum.
@@ -61,6 +61,10 @@ The optimum worst-eigenbasis fraction tends to $`\beta_k(\eta)/k`$ as $`p\downar
 | How are the finite identities reproduced? | [Verification](verification/README.md) |
 
 The [LLM reading guide](llms.txt) maps questions to these sources.
+
+## Learn the argument
+
+The learning route uses Sidhu and Kok's [*A Geometric Perspective on Quantum Parameter Estimation*](https://arxiv.org/abs/1907.06628v2) as its single educational anchor. Begin with the [source-to-project bridge](learning/ANCHOR.md), then follow the [30-milestone map](learning/MILESTONES.md): 12 background milestones build the statistical and measurement framework, and 18 narrative milestones connect the construction, obstruction and exact limiting coefficient. The [learning entrypoint](learning/README.md) gives shorter routes for particular questions.
 
 ## Reproduce the checks
 
