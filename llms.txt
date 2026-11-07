@@ -1,0 +1,18 @@
+# Quantum Readout Rank Threshold
+
+This repository studies how many identical copies a fixed measurement must process jointly to retain a uniform fraction of local SLD quantum Fisher information.
+
+## Read by question
+
+- Exact experiment, allowed apparatus and rank classification: science/model.md
+- Two-copy SWAP and projective 3-design construction, every tangent component and circuit resources: science/two-copy-readout.md
+- Arbitrary-outcome finite-block converse, Schur multiplicities and uniform normalized-effect argument: science/finite-block-obstruction.md
+- Exact leading spectral-information coefficient, attaining binary measurement and limit order: science/singular-information.md
+- Calibration, coherent block size, persistent memory and local versus global loss: science/interpretation.md
+- Primary antecedents and matched comparisons: references/RELATED_WORK.md
+- Bibliographic metadata: references/references.bib
+- Executed finite checks, dependencies and boundaries: verification/README.md
+
+Use the source definitions: J is single-copy SLD information, J_2=2J, and all input copies and measurement outcomes are charged. The exact rank-three minimax coefficient concerns one spectral tangent after taking the rare eigenvalue to zero with block size and the second eigenvalue fixed. Distinguish this from general finite-sample estimation or adaptive calibration.
+
+For a connected account, start at README.md, then follow the model, construction, converse, singular-coefficient calculation and interpretation. For reproduction, run the commands in verification/README.md. Finite numerical checks support the displayed identities; the general statements rely on the written proofs.
