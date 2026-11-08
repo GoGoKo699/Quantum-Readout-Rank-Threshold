@@ -10,4 +10,4 @@ The question is whether one apparatus can preserve a constant fraction of every 
 | Identify and attain the surviving singular information | [Exact coefficient](singular-information.md) |
 | Compare block size, calibration and statistical tasks | [Interpretation](interpretation.md) |
 
-The [sister calibrated-readout account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) supplies the paid-pilot and strong/weak calibration analysis. The exact Haar calculation is developed here. Their common object is the Fisher information of the full physical record, normalized by every consumed copy's QFI; their resource models remain distinct.
+The [sister calibrated-readout account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/92a59ee026610f9a0e3c347630bd399421172337/science/paid-calibration.md) supplies the paid-pilot and strong/weak calibration analysis. The exact Haar calculation is developed here. Their common object is the Fisher information of the full physical record, normalized by every consumed copy's QFI; their resource models remain distinct.
