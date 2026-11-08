@@ -98,7 +98,7 @@ For rank-two qutrits, a specified continuous apparatus permits a sharper compari
 
 For any total budget $`N`$, a classically adaptive experiment measuring fresh copies separately has full-model fraction at most $`1/4`$, even when the complete calibration transcript is retained. The inherited support-information budget applies conditionally to every one-copy apparatus, and the Fisher chain rule sums its four-dimensional support-rotation trace budget to at most $`N`$. Repeated Haar pairs therefore give a strict local FI separation for even $`N`$ in the stated small-$`b`$ range. An estimator risk or optimal calibration crossover requires a different conclusion and is not inferred.
 
-The [sister paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) owns the pilot identity and distinct strong/weak error geometry. No coherent memory may join different copies in the opposing single-copy class.
+The [sister paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md) owns the pilot identity and distinct strong/weak error geometry. No coherent memory may join different copies in the opposing single-copy class.
 
 ## 5. The finite-block obstruction
 

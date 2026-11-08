@@ -103,7 +103,7 @@ Both the branch frequency and its conditional outcome matter. With a pilot recor
 I_{\rm total}=I_Y+(N-m)\mathbb E_Y[I_{M_Y}].
 ```
 
-The apparatus is fixed conditional on the observed pilot. The derivative does not act on the estimator's output. The [sister calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) develops the strong/weak error distinction and an exact binomial pilot. Averaging the resulting information is different from substituting a calibration mean squared error into a nonlinear formula.
+The apparatus is fixed conditional on the observed pilot. The derivative does not act on the estimator's output. The [sister calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md) develops the strong/weak error distinction and an exact binomial pilot. Averaging the resulting information is different from substituting a calibration mean squared error into a nonlinear formula.
 
 The inherited single-copy support-information budget applies separately to each conditional apparatus. After summing the transcript information, the full-model worst-direction fraction is at most $`1/4`$ for every classically adaptive one-copy protocol. The exact [Haar pair proof](../science/haar-pair-readout.md) shows a fraction strictly above $`1/4`$ for sufficiently small positive weak eigenvalue, tending to $`1/4`$. This is a local FI separation; it is not a finite-sample risk ordering or a universal crossover law.
 

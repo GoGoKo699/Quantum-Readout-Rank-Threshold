@@ -272,7 +272,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Conceptual connection.** This is an adaptive corollary of an inherited budget, not a second discovery of the calibrated theorem.
 
-**Source pointers.** DDG20 Sections 2.1, 2.7 and 2.10; [Haar comparison](../science/haar-pair-readout.md); [sister calibrated theorem](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/optimality.md).
+**Source pointers.** DDG20 Sections 2.1, 2.7 and 2.10; [Haar comparison](../science/haar-pair-readout.md); [sister calibrated theorem](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/optimality.md).
 
 ### M23: The paid pilot is part of the experiment
 
@@ -284,7 +284,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Conceptual connection.** An exact discrete pilot law can matter more than a nominal mean squared angular error near a rare outcome.
 
-**Source pointers.** DDG20 Sections 2.1, 2.7 and 4.5; [complete-record bridge](ANCHOR.md#why-the-complete-record-matters); [sister paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md).
+**Source pointers.** DDG20 Sections 2.1, 2.7 and 4.5; [complete-record bridge](ANCHOR.md#why-the-complete-record-matters); [sister paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md).
 
 ### M24: Strong leakage and weak-vector error differ
 
@@ -296,7 +296,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Conceptual connection.** Full-matrix nuisance coupling strengthens the strong-error warning and prevents scalar retention from certifying simultaneous protection.
 
-**Source pointers.** DDG20 Section 2.7; [sister error calculation](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md); [comparison scope](../science/interpretation.md).
+**Source pointers.** DDG20 Section 2.7; [sister error calculation](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md); [comparison scope](../science/interpretation.md).
 
 ### M25: Geometric calibration is not an FI threshold
 
@@ -308,7 +308,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Conceptual connection.** A state-independent pair apparatus can preserve local information without first outputting a consistent eigenbasis estimate.
 
-**Source pointers.** DDG20 Sections 4.5 and 4.6.3; [sister paid pilot and geometric lower bound](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md).
+**Source pointers.** DDG20 Sections 4.5 and 4.6.3; [sister paid pilot and geometric lower bound](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md).
 
 ### M26: Haar readout as an exact comparator
 

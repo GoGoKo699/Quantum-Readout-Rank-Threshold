@@ -27,7 +27,7 @@ On qubit registers, the protocol uses a SWAP-test ancilla and random Clifford ga
 
 ## Paid calibration and an exact two-copy comparison
 
-The sister project [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) determines the sharp calibrated single-copy fraction. Its [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) counts the entire pilot record and separates strong- from weak-eigenvector errors near a small occupied eigenvalue. This repository supplies the exact [continuous-Haar pair comparison](science/haar-pair-readout.md).
+The sister project [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) determines the sharp calibrated single-copy fraction. Its [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md) counts the entire pilot record and separates strong- from weak-eigenvector errors near a small occupied eigenvalue. This repository supplies the exact [continuous-Haar pair comparison](science/haar-pair-readout.md).
 
 For a rank-two qutrit $`\rho_b=\mathrm{diag}(1-b,b,0)`$, parity followed by continuous Haar readout has full-model fraction $`c_H(b)\gt1/4`$ for every sufficiently small $`b\gt0`$, tending to $`1/4`$ as $`b\downarrow0`$. Every protocol measuring fresh copies separately, with classical adaptation and calibration records counted, has fraction at most $`1/4`$. Thus this continuous pair apparatus strictly exceeds the adaptive single-copy ceiling near the boundary. The proof uses exact branch information and all seven tangent directions.
 
