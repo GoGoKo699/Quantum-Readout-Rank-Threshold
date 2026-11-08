@@ -92,7 +92,15 @@ For $`n`$-qubit inputs, a random Clifford followed by computational-basis readou
 
 The [complete proof](two-copy-readout.md) derives the design moment inequality and compares every rank-two tangent component. It handles equal positive eigenvalues directly, without differentiating an arbitrary basis inside a degenerate eigenspace. The constant is a proved lower bound, not an optimality claim.
 
-## 4. The finite-block obstruction
+## 4. Exact Haar readout and paid calibration
+
+For rank-two qutrits, a specified continuous apparatus permits a sharper comparison than the finite-design lower certificate. Use the same parity measurement followed, in both branches, by the continuous Haar rank-one POVM on the full pair space. At $`\rho_b=\operatorname{diag}(1-b,b,0)`$, its fraction of $`J_2`$ in the least favorable full-model direction is $`c_H(b)\gt1/4`$ for every sufficiently small positive $`b`$, with limit $`1/4`$ as $`b\downarrow0`$. The [exact branch calculation](haar-pair-readout.md) proves the full seven-dimensional statement. It does not give the finite Clifford ensemble that constant.
+
+For any total budget $`N`$, a classically adaptive experiment measuring fresh copies separately has full-model fraction at most $`1/4`$, even when the complete calibration transcript is retained. The inherited support-information budget applies conditionally to every one-copy apparatus, and the Fisher chain rule sums its four-dimensional support-rotation trace budget to at most $`N`$. Repeated Haar pairs therefore give a strict local FI separation for even $`N`$ in the stated small-$`b`$ range. An estimator risk or optimal calibration crossover requires a different conclusion and is not inferred.
+
+The [sister paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) owns the pilot identity and distinct strong/weak error geometry. No coherent memory may join different copies in the opposing single-copy class.
+
+## 5. The finite-block obstruction
 
 Fix $`0\lt \eta\le1/4`$ and $`0\lt p\lt \eta`$, and define
 

@@ -4,6 +4,8 @@ A processor receives two identical copies of a state whose support and eigenvalu
 
 This measurement preserves at least one twelfth of the two-copy SLD quantum Fisher information in every regular rank-two tangent direction. The fraction is independent of the ambient dimension and of the smaller positive eigenvalue. On qubit registers the measurement uses a SWAP test and random Clifford gates, with a gate count polynomial in the number of input qubits.
 
+The constant is a conservative certificate. The [exact continuous-Haar companion](haar-pair-readout.md) computes a distinct parity-pair apparatus on rank-two qutrits and proves a strict near-boundary comparison with fully counted adaptive single-copy readout. Its sharper statement is not a sharp constant for the finite Clifford ensemble used here.
+
 The symmetry sectors and randomized-measurement primitives are established tools. Two-copy Fisher-symmetric measurements and Slater-determinant effects are studied in [ZH18](../references/RELATED_WORK.md#zh18); the projective 3-design framework and third-moment method are developed for multiparameter metrology in [ZC26](../references/RELATED_WORK.md#zc26). The statement proved here controls all tangent directions of an unknown, possibly ill-conditioned, two-dimensional support in an arbitrary ambient space. The [related-work comparison](../references/RELATED_WORK.md) specifies that distinction and the associated attribution.
 
 ## Statistical model and information convention

@@ -43,7 +43,15 @@ The additional converse step shows that sectors already populated at the rank-tw
 
 ## Contribution and priority boundary
 
-The contribution is the rank-two/rank-three boundary for uniform local information recovery under the stated architecture. The symmetry measurements, designs, and rank certificates are inherited. The claim is neither exact Fisher symmetry nor optimality of the numerical constant. The matched comparisons support this specific addition; they are not an exhaustive certification of publication priority.
+The contribution is the rank-two/rank-three boundary for uniform local information recovery under the stated architecture, together with the [exact Haar pair comparison](../science/haar-pair-readout.md) at a shrinking rank-two qutrit eigenvalue. The symmetry measurements, designs, and rank certificates are inherited. The claim is neither exact Fisher symmetry nor optimality of the finite-design constant. The matched comparisons support these specific additions; they are not an exhaustive certification of publication priority.
+
+## Calibration and the exact Haar comparison
+
+[Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) proves the sharp eigenbasis-calibrated single-copy fraction and owns the [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md). The present companion computes a specified continuous-Haar parity-pair readout on the full moving-support rank-two qutrit tangent. Exact branch formulas and phase covariance give four class coefficients. Their limits and Fatou's lemma establish a strict full-model fraction above $`1/4`$ for sufficiently small positive second eigenvalue, approaching $`1/4`$. This is distinct from the finite-design $`1/12`$ certificate and from the fixed-Hilbert-space qubit result of [ZH18](#zh18).
+
+The opposing adaptive single-copy ceiling is a corollary of the support-rotation budget of [ZC26](#zc26), Theorem 4, Case 3, Eq. (76), and the classical adaptive Fisher chain rule, stated explicitly in [NZ26](#nz26), Section 4.3, Lemma 4.6. These ingredients are credited once; their application to complete pilot records is not a new budget theorem. Barndorff-Nielsen and Gill [BNG00](#bng00), Section 4, establish fixed-model two-stage adaptive attainability. It does not imply a calibration cost uniform over shrinking occupied eigenvalues.
+
+The exact Haar formulas, their eventual strict full-matrix comparison and the complementary strong/weak calibration geometry give a matched resource account. A calibrated optimum, a conservative pair lower bound and a calibration MSE cannot determine a universal crossover law. The claims are local FI statements, not finite-sample risk dominance or an optimal two-copy constant. The comparison is not an exhaustive priority claim for every short corollary.
 
 ## References
 
@@ -55,7 +63,7 @@ Huangjun Zhu and Masahito Hayashi, **Universally Fisher-Symmetric Informationall
 
 ### ZC26
 
-Sisi Zhou and Senrui Chen, **Randomized Measurements for Multiparameter Quantum Metrology**, *PRX Quantum* **7**, 010314 (2026). [Published article](https://doi.org/10.1103/s27y-gbrp); [arXiv:2502.03536v3](https://arxiv.org/abs/2502.03536v3); [full text](https://arxiv.org/html/2502.03536v3). Relevant: Definition 1, Definition 3, Theorems 1–3, and Sec. VII.2.
+Sisi Zhou and Senrui Chen, **Randomized Measurements for Multiparameter Quantum Metrology**, *PRX Quantum* **7**, 010314 (2026). [Published article](https://doi.org/10.1103/s27y-gbrp); [arXiv:2502.03536v3](https://arxiv.org/abs/2502.03536v3); [full text](https://arxiv.org/html/2502.03536v3). Relevant: Definition 1, Definition 3, Theorems 1–3, Theorem 4, Case 3, Eq. (76), and Sec. VII.2.
 
 ### PSW25
 
@@ -63,7 +71,7 @@ Angelos Pelecanos, Jack Spilecki, and John Wright, **The debiased Keyl's algorit
 
 ### NZ26
 
-Ashwin Nayak and Xingyu Zhou, **Optimal Low-Rank Quantum State Tomography with Bounded-Sample Joint Measurements**, arXiv:2609.10514v2 (2026). [Preprint](https://arxiv.org/abs/2609.10514v2); [full text](https://arxiv.org/html/2609.10514v2). Relevant: Theorems 1.1–1.2, Proposition 4.2, and the adaptive protocol model.
+Ashwin Nayak and Xingyu Zhou, **Optimal Low-Rank Quantum State Tomography with Bounded-Sample Joint Measurements**, arXiv:2609.10514v2 (2026). [Preprint](https://arxiv.org/abs/2609.10514v2); [full text](https://arxiv.org/html/2609.10514v2). Relevant: Theorems 1.1–1.2, Proposition 4.2, Section 4.3, Lemma 4.6, and the adaptive protocol model.
 
 ### OW15
 
@@ -89,7 +97,16 @@ Robert Koenig and John A. Smolin, **How to efficiently select an arbitrary Cliff
 
 James W. Gardner, Federico Belliardo, Gideon Lee, Tuvia Gefen, and Liang Jiang, **Quantum superresolution and noise spectroscopy with quantum computing**, arXiv:2602.17862v1 (2026). [Preprint](https://arxiv.org/abs/2602.17862v1); [full text](https://arxiv.org/html/2602.17862v1). Relevant: Proposition 2, Table I, and the discussions of rank testing and constant working memory.
 
+### BNG00
+
+Ole E. Barndorff-Nielsen and Richard D. Gill, **Fisher information in quantum statistics**, *Journal of Physics A* **33**, 4481–4490 (2000). [Published article](https://doi.org/10.1088/0305-4470/33/24/306); [arXiv:quant-ph/9808009v4](https://arxiv.org/abs/quant-ph/9808009v4); [full text](https://arxiv.org/html/quant-ph/9808009v4). Relevant: Sections 2–4, especially two-stage adaptive attainability at a fixed statistical model.
+
 ## Educational anchor
 
+<a id="ddg20"></a>
+**DDG20.** Rafał Demkowicz-Dobrzański, Wojciech Górecki and Mădălin Guţă, *Multi-parameter estimation beyond Quantum Fisher Information*, *Journal of Physics A* **53**, 363001 (2020). [Published article](https://doi.org/10.1088/1751-8121/ab8ef3); [arXiv:2001.11742v2](https://arxiv.org/abs/2001.11742v2); [full text](https://arxiv.org/html/2001.11742v2). The sole educational anchor supplies classical and SLD information, nuisance parameters, multiple-copy bounds and asymptotic applicability. The [bridge](../learning/ANCHOR.md) distinguishes these foundations from the rank-deficient and fixed-readout proofs supplied here.
+
+## Additional geometric reference
+
 <a id="sk20"></a>
-**SK20.** Jasminder S. Sidhu and Pieter Kok, *A Geometric Perspective on Quantum Parameter Estimation*, AVS Quantum Science **2**, 014701 (2020), [DOI](https://doi.org/10.1116/1.5119961), [arXiv:1907.06628v2](https://arxiv.org/abs/1907.06628v2). This review supplies the classical and quantum information geometry used in the [educational bridge](../learning/ANCHOR.md). The project-specific collective readout, universal-apparatus quantifiers and Schur-sector converse are developed in the scientific account and attributed to their research sources above.
+**SK20.** Jasminder S. Sidhu and Pieter Kok, *A Geometric Perspective on Quantum Parameter Estimation*, AVS Quantum Science **2**, 014701 (2020), [DOI](https://doi.org/10.1116/1.5119961), [arXiv:1907.06628v2](https://arxiv.org/abs/1907.06628v2). This is an additional research reference for information geometry. DDG20 is the single educational anchor; no additional reading prerequisite is imposed.

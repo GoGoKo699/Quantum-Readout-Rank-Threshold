@@ -70,8 +70,20 @@ This information statement does not by itself give a finite-sample globally vali
 
 The distinction is especially visible for a rare eigenvalue. For two nearby values $`p`$ and $`p+\delta p`$ in the same eigenbasis, the half-trace distance is $`|\delta p|`$. The local SLD squared length contains $`(\delta p)^2/p`$. Absolute reconstruction error and uniform relative local information therefore weight the rare component differently. Optimal bounded-block trace-norm tomography can coexist with the present obstruction; the corresponding result is compared explicitly in [NZ26](../references/RELATED_WORK.md#nz26).
 
+## Paid calibration and the exact pair comparison
+
+Learning a basis is an experiment of its own. With $`m`$ pilot copies, retained transcript $`Y`$ and $`N-m`$ subsequent copies measured with the selected apparatus $`M_Y`$, the complete-record matrix is
+
+```math
+I_{\rm total}=I_Y+(N-m)\mathbb E_Y[I_{M_Y}].
+```
+
+The conditional apparatus is fixed during each derivative. Averaging its information is not substituting a mean squared calibration error into its information formula. With eigenvector nuisance parameters, effective information comes from the Schur complement of the complete matrix. The [sister account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) develops these distinctions and shows why strong and weak eigenvector errors have different effects near a shrinking occupied eigenvalue. Its geometric calibration-consistency lower bounds do not themselves prove a total-FI crossover.
+
+The [exact Haar pair apparatus](haar-pair-readout.md) gives a complementary comparison that does not require learning a basis. For $`\rho_b=\operatorname{diag}(1-b,b,0)`$, its full-model fraction is strictly greater than $`1/4`$ for sufficiently small $`b\gt0`$, tending to $`1/4`$. Fully counted classically adaptive single-copy experiments have fraction at most $`1/4`$ from their conditional support-information budget. All pair outcomes, including the rare antisymmetric branch, are counted. This is a strict local-information comparison for the continuous-Haar apparatus; the finite Clifford construction retains its separate $`1/12`$ certificate. No universal crossover law, optimal two-copy constant or finite-sample risk ordering follows.
+
 ## What is established
 
 The positive result gives one finite, state-independent apparatus for all regular rank-two models, including an unknown support and arbitrary positive eigenvalue ratio. The negative result shows that no fixed finite block retains a positive fraction uniformly over rank-three qutrit spectra and eigenbases. Its exact singular coefficient is attained, so the mechanism is more specific than failure of a chosen randomized measurement.
 
-The rank promise and the fixed-apparatus premise remain part of this conclusion. Rank-changing boundary parametrizations, approximate-rank inputs, globally adaptive calibration, and finite-sample estimation require their own models. The classification identifies where bounded coherent processing alone can remove spectral conditioning from universal local readout.
+The rank promise and the fixed-apparatus premise remain part of this conclusion. The exact Haar comparison additionally addresses the opposing classically adaptive one-copy FI budget at rank two. Rank-changing boundary parametrizations, approximate-rank inputs, persistent coherent memory and finite-sample estimation require their own models. The classification identifies where bounded coherent processing alone can remove spectral conditioning from universal local readout.
