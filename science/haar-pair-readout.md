@@ -4,14 +4,14 @@ The [finite-design construction](two-copy-readout.md) retains at least $`1/12`$ 
 
 For a rank-two qutrit approaching a pure state, parity followed by Haar readout has a worst-direction fraction strictly greater than $`1/4`$ for all sufficiently small positive second eigenvalues. It approaches $`1/4`$ from above. Every protocol measuring fresh copies separately, with arbitrary classical adaptation and all calibration records counted, has full-model fraction at most $`1/4`$. The comparison concerns local Fisher information. It neither orders finite-sample risks nor determines a universal calibration crossover.
 
-The sister repository [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) owns the calibrated $`1/4`$ optimum and the [paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/92a59ee026610f9a0e3c347630bd399421172337/science/paid-calibration.md): complete pilot records, strong and weak eigenvector errors, and the scope of geometric calibration costs. The exact Haar calculation has its authoritative home here. The parity and design primitives, support-information budget and adaptive Fisher chain rule are inherited ingredients; see [related work](../references/RELATED_WORK.md#calibration-and-the-exact-haar-comparison).
+The sister repository [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) owns the calibrated $`1/4`$ optimum and the [paid-calibration account](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md): complete pilot records, strong and weak eigenvector errors, and the scope of geometric calibration costs. The exact Haar calculation has its authoritative home here. The parity and design primitives, support-information budget and adaptive Fisher chain rule are inherited ingredients; see [related work](../references/RELATED_WORK.md#calibration-and-the-exact-haar-comparison).
 
 ## State, tangent and counted fraction
 
 Fix
 
 ```math
-\rho_b=\operatorname{diag}(a,b,0),
+\rho_b=\mathrm{diag}(a,b,0),
 \qquad a=1-b,\qquad 0\lt b\lt 1/2,
 \qquad q=ab.
 ```
@@ -110,7 +110,7 @@ I_+=4a^2|z|^2h_{12}+4b^2|z|^2h_{23},
 r_z=\frac{a^2h_{12}+b^2h_{23}}2.
 ```
 
-**Occupied probabilities.** For $`A=\operatorname{diag}(-v,v,0)`$, the antisymmetric probability derivative is $`(a-b)v`$. The symmetric diagonal derivative is $`v(-2a,a-b,2b)`$. Put
+**Occupied probabilities.** For $`A=\mathrm{diag}(-v,v,0)`$, the antisymmetric probability derivative is $`(a-b)v`$. The symmetric diagonal derivative is $`v(-2a,a-b,2b)`$. Put
 
 ```math
 K=\mathbb E\frac{[-2aX_1+(a-b)X_2+2bX_3]^2}{P}.
@@ -169,7 +169,7 @@ As $`b\downarrow0`$, the nonnegative integrand $`X_2/P`$ tends almost surely to 
 \qquad \lim_{b\downarrow0}c_H(b)=\frac14.}
 ```
 
-The opposing single-copy ceiling applies to the complete adaptive record. At a fixed true state, let $`\mathcal C`$ be the four-dimensional support-null tangent subspace. Every one-copy POVM obeys the inherited [support-information budget](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/92a59ee026610f9a0e3c347630bd399421172337/science/optimality.md#information-budget-for-support-rotations), $`\operatorname{tr}(J_{\mathcal C}^{-1}I_{\mathcal C})\le1`$. Positivity gives its integrand directly: for an effect density $`E`$ and probability $`p=aE_{11}+bE_{22}`$,
+The opposing single-copy ceiling applies to the complete adaptive record. At a fixed true state, let $`\mathcal C`$ be the four-dimensional support-null tangent subspace. Every one-copy POVM obeys the inherited [support-information budget](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/optimality.md#information-budget-for-support-rotations), $`\mathrm{tr}(J_{\mathcal C}^{-1}I_{\mathcal C})\le1`$. Positivity gives its integrand directly: for an effect density $`E`$ and probability $`p=aE_{11}+bE_{22}`$,
 
 ```math
 \frac{a|E_{13}|^2+b|E_{23}|^2}{p}\le E_{33}.
@@ -178,7 +178,7 @@ The opposing single-copy ceiling applies to the complete adaptive record. At a f
 Completeness integrates $`E_{33}`$ to one. At $`p=0`$ the numerator also vanishes under the ordinary score convention. Now condition on each complete classical history: the next apparatus is a fixed one-copy POVM. The [adaptive Fisher chain rule](../references/RELATED_WORK.md#nz26) gives
 
 ```math
-\operatorname{tr}\left(J_{\mathcal C}^{-1}I_{{\rm total},\mathcal C}\right)
+\mathrm{tr}\left(J_{\mathcal C}^{-1}I_{{\rm total},\mathcal C}\right)
 \le N,
 \qquad
 I_{\rm total}\succeq cNJ\ \Longrightarrow\ 4cN\le N.
@@ -186,7 +186,7 @@ I_{\rm total}\succeq cNJ\ \Longrightarrow\ 4cN\le N.
 
 Thus every classically adaptive single-copy protocol, including all pilot copies, has $`c\le1/4`$. No coherent memory may join different copies in this comparison. For every even $`N`$, repeated Haar pairs have fraction $`c_H(b)`$ and strictly exceed that ceiling for $`0\lt b\lt b_0`$. The claim holds even against a single-copy experiment supplied the nominal basis; it does not depend on proving an optimal basis-learning cost.
 
-The [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/92a59ee026610f9a0e3c347630bd399421172337/science/paid-calibration.md) makes the complementary point: strong and weak basis errors differ, and an exact pilot must be charged through $`I_Y+(N-m)\mathbb E I_{M_Y}`$. A calibration MSE, the ideal $`1/4`$ optimum, and the conservative finite-design $`1/12`$ certificate do not determine an actual crossover.
+The [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/main/science/paid-calibration.md) makes the complementary point: strong and weak basis errors differ, and an exact pilot must be charged through $`I_Y+(N-m)\mathbb E I_{M_Y}`$. A calibration MSE, the ideal $`1/4`$ optimum, and the conservative finite-design $`1/12`$ certificate do not determine an actual crossover.
 
 ## Reproduction and limits
 
