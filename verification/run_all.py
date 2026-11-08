@@ -1,4 +1,4 @@
-"""Run the repository's two scientific reproduction checks."""
+"""Run the repository's scientific reproduction checks."""
 from __future__ import annotations
 
 import json
@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:
-    for relative in ("experiments/verify_readout.py", "experiments/check_schur.py"):
+    for relative in ("experiments/verify_readout.py", "experiments/check_schur.py", "verification/verify_haar_pair.py"):
         result = subprocess.run(
             [sys.executable, str(ROOT / relative)],
             cwd=ROOT, capture_output=True, text=True,
@@ -22,7 +22,10 @@ def main() -> None:
         print(f"PASS: {relative}")
     readout = json.loads((ROOT / "experiments/results/readout.json").read_text())
     schur = json.loads((ROOT / "experiments/results/schur.json").read_text())
+    haar = json.loads((ROOT / "experiments/results/haar_pair.json").read_text())
     print(json.dumps({
+        "haar_status": haar["status"],
+        "haar_integral_cases": len(haar["cases"]),
         "readout_status": readout["status"],
         "tensor_checks": readout["tensor_checks"],
         "finite_design_moments": readout["finite_design_moments"],

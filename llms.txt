@@ -8,12 +8,13 @@ This repository studies how many identical copies a fixed measurement must proce
 - Complete common understanding map, M01–M30, with dependencies and source pointers: learning/MILESTONES.md
 - Reader entrypoint and focused routes: learning/README.md
 
-The single educational anchor is Sidhu and Kok, A Geometric Perspective on Quantum Parameter Estimation, AVS Quantum Science 2, 014701 (2020), arXiv:1907.06628v2. Its local estimation geometry motivates the problem; the project supplies the fixed-apparatus, design and Schur arguments. The shared map has 12 background and 18 narrative milestones. It records conceptual targets rather than a reader's assessment history.
+The single educational anchor is Demkowicz-Dobrzanski, Gorecki and Guta, Multi-parameter estimation beyond Quantum Fisher Information, J. Phys. A 53, 363001 (2020), arXiv:2001.11742v2, shared with Calibrated-Quantum-Readout. It supplies score, SLD, nuisance and collective-estimation foundations; the project supplies the fixed-rank design, Schur and exact Haar arguments. The 30-milestone map has 10 background and 20 narrative milestones and records conceptual targets rather than a reader's assessment history.
 
 ## Read by question
 
 - Exact experiment, allowed apparatus and rank classification: science/model.md
 - Two-copy SWAP and projective 3-design construction, every tangent component and circuit resources: science/two-copy-readout.md
+- Exact continuous-Haar pair information for all seven rank-two qutrit tangent directions, strict near-boundary comparison with the adaptive one-copy ceiling, and its implementation limits: science/haar-pair-readout.md
 - Arbitrary-outcome finite-block converse, Schur multiplicities and uniform normalized-effect argument: science/finite-block-obstruction.md
 - Exact leading spectral-information coefficient, attaining binary measurement and limit order: science/singular-information.md
 - Calibration, coherent block size, persistent memory and local versus global loss: science/interpretation.md
@@ -23,4 +24,6 @@ The single educational anchor is Sidhu and Kok, A Geometric Perspective on Quant
 
 Use the source definitions: J is single-copy SLD information, J_2=2J, and all input copies and measurement outcomes are charged. The exact rank-three minimax coefficient concerns one spectral tangent after taking the rare eigenvalue to zero with block size and the second eigenvalue fixed. Distinguish this from general finite-sample estimation or adaptive calibration.
 
-For a connected account, start at README.md, then follow the model, construction, converse, singular-coefficient calculation and interpretation. For reproduction, run the commands in verification/README.md. Finite numerical checks support the displayed identities; the general statements rely on the written proofs.
+For a connected account, start at README.md and science/README.md, then follow the model, finite-design construction, exact Haar comparison, converse, singular-coefficient calculation and interpretation. For reproduction, run the commands in verification/README.md. Finite numerical checks support the displayed identities; the general statements rely on the written proofs.
+
+The sister Calibrated-Quantum-Readout repository owns the calibrated single-copy optimum and science/paid-calibration.md, which analyzes complete pilot transcripts and separate strong/weak eigenvector errors. This repository owns the exact Haar pair comparison. Its full-model fraction is greater than one quarter sufficiently near the rank-one boundary, tending to one quarter; no sharp finite-Clifford constant, universal paid-calibration crossover or finite-sample risk ordering is asserted. Scientific counterpart: https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md .

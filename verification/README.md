@@ -1,23 +1,24 @@
 # Reproduce the scientific checks
 
-The analytical results are proved in the [two-copy readout](../science/two-copy-readout.md), [finite-block obstruction](../science/finite-block-obstruction.md), and [singular coefficient](../science/singular-information.md) accounts. The checks below target their tensor identities, normalization factors, design moments and finite coefficient calculations.
+The analytical results are proved in the [two-copy readout](../science/two-copy-readout.md), [exact Haar comparison](../science/haar-pair-readout.md), [finite-block obstruction](../science/finite-block-obstruction.md), and [singular coefficient](../science/singular-information.md) accounts. The checks below target their tensor identities, normalization factors, design moments, branch integrals and finite coefficient calculations.
 
 ## Run
 
-The recorded environment is Python 3.12.14 with NumPy 2.3.5. The Schur checks use only Python's standard library. From the repository root:
+The numerical requirements pin NumPy 2.3.5 and mpmath 1.3.0. Python 3.10 or newer is supported; the original tensor/Schur reference run used Python 3.12.14. The Schur checks use only Python's standard library. From the repository root:
 
 ```bash
 python3 -m pip install -r verification/requirements.txt
 python3 verification/run_all.py
 ```
 
-The runner executes both scripts and fails if either check fails. It rewrites the two JSON result files deterministically in the recorded environment. Floating-point diagnostics can vary slightly between numerical-library implementations; the script records its tolerances and checks the actual identities and bounds.
+The runner executes all three scripts and fails if any check fails. It rewrites their JSON result files deterministically in the recorded environment. Floating-point diagnostics can vary slightly between numerical-library implementations; the scripts record their tolerances and check the actual identities and bounds.
 
 Each script can also be run independently:
 
 ```bash
 python3 experiments/verify_readout.py
 python3 experiments/check_schur.py
+python3 verification/verify_haar_pair.py
 ```
 
 ## Two-copy readout
@@ -46,6 +47,14 @@ The [recorded result](../experiments/results/schur.json) contains 30 Schur cases
 These computations test formulas on which the analytical comparison depends. They do not prove compactness, almost-everywhere positivity, dominated convergence, or an assertion uniform over all POVMs. Those steps remain explicit in the written converse.
 
 The checks do not establish noise robustness, classical estimation complexity, or a simultaneous finite-$`p`$ scaling law. The small-system finite-design information is a diagnostic of the stated apparatus, not a numerical claim of optimality.
+
+## Exact continuous-Haar comparison
+
+[verify_haar_pair.py](verify_haar_pair.py) computes the exact expectations in [the Haar account](../science/haar-pair-readout.md) through deterministic Laplace integrals with 35 decimal digits. For independent unit-mean exponentials, the transform is a product of factors $`(1+tp_i)^{-1}`$, with additional denominator factors for each moment. Diagonal second moments include the exponential factor two. The calculation checks $`\sum_i p_i g_i=1`$ and $`\sum_i p_i h_{ij}=1`$, in addition to the four tangent-class ratios. Its tolerance for these normalization identities is $`10^{-25}`$.
+
+The [recorded result](../experiments/results/haar_pair.json) covers the equal-spectrum point and four shrinking eigenvalues. At $`b=1/2`$, all four class fractions are $`1/4`$. At $`b=0.1,0.01,0.001,10^{-5}`$, the sampled minima are approximately 0.2658944, 0.2566769, 0.2512297 and 0.2500238. The output identifies these as continuous-Haar fractions of the complete pair QFI, not finite Clifford information.
+
+These values check moment factors and representative behavior. The written proof establishes the full seven-dimensional decomposition, the limit and the strict inequality for all sufficiently small positive $`b`$ using phase covariance and Fatou's lemma. No sampled minimum is used to prove a universal constant, to specify the threshold, or to infer finite-sample risk ordering.
 
 ## Hosted mathematical display
 

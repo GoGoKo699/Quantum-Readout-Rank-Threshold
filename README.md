@@ -25,6 +25,14 @@ The antisymmetric branch is a pure state encoding the occupied support. Its prob
 
 On qubit registers, the protocol uses a SWAP-test ancilla and random Clifford gates. This is an efficient physical readout under the stated circuit model. General classical estimation complexity is separate.
 
+## Paid calibration and an exact two-copy comparison
+
+The sister project [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) determines the sharp calibrated single-copy fraction. Its [paid-calibration analysis](https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md) counts the entire pilot record and separates strong- from weak-eigenvector errors near a small occupied eigenvalue. This repository supplies the exact [continuous-Haar pair comparison](science/haar-pair-readout.md).
+
+For a rank-two qutrit $`\rho_b=\mathrm{diag}(1-b,b,0)`$, parity followed by continuous Haar readout has full-model fraction $`c_H(b)\gt1/4`$ for every sufficiently small $`b\gt0`$, tending to $`1/4`$ as $`b\downarrow0`$. Every protocol measuring fresh copies separately, with classical adaptation and calibration records counted, has fraction at most $`1/4`$. Thus this continuous pair apparatus strictly exceeds the adaptive single-copy ceiling near the boundary. The proof uses exact branch information and all seven tangent directions.
+
+The Haar apparatus is distinct from the finite Clifford implementation above. The result does not assign the finite design a sharp constant, order finite-sample estimation risks, or assume a crossover law in calibration budget.
+
 ## Rank three defeats every fixed block
 
 For the unknown-basis qutrit family
@@ -54,6 +62,7 @@ The optimum worst-eigenbasis fraction tends to $`\beta_k(\eta)/k`$ as $`p\downar
 |---|---|
 | What is the experiment and exact classification? | [Model and claims](science/model.md) |
 | How does the two-copy measurement work? | [Construction and complete proof](science/two-copy-readout.md) |
+| What does exact pair information say near a shrinking occupied eigenvalue? | [Haar pair readout and adaptive single-copy comparison](science/haar-pair-readout.md) |
 | Why does the converse cover every finite-block POVM? | [Finite-block obstruction](science/finite-block-obstruction.md) |
 | What information survives, and which measurement attains it? | [Exact singular coefficient](science/singular-information.md) |
 | What do block size, calibration and sensitivity mean operationally? | [Resource interpretation](science/interpretation.md) |
@@ -64,7 +73,7 @@ The [LLM reading guide](llms.txt) maps questions to these sources.
 
 ## Learn the argument
 
-The learning route uses Sidhu and Kok's [*A Geometric Perspective on Quantum Parameter Estimation*](https://arxiv.org/abs/1907.06628v2) as its single educational anchor. Begin with the [source-to-project bridge](learning/ANCHOR.md), then follow the [30-milestone map](learning/MILESTONES.md): 12 background milestones build the statistical and measurement framework, and 18 narrative milestones connect the construction, obstruction and exact limiting coefficient. The [learning entrypoint](learning/README.md) gives shorter routes for particular questions.
+The learning route uses Demkowicz-Dobrzański, Górecki and Guţă's [*Multi-parameter estimation beyond Quantum Fisher Information*](https://arxiv.org/abs/2001.11742v2) as its single educational anchor, shared with Calibrated Quantum Readout. Begin with the [source-to-project bridge](learning/ANCHOR.md), then follow the [30-milestone map](learning/MILESTONES.md): 10 background milestones and 20 narrative milestones. The [learning entrypoint](learning/README.md) gives focused routes through the construction, converse and fully counted comparison.
 
 ## Reproduce the checks
 
@@ -75,7 +84,7 @@ python3 -m pip install -r verification/requirements.txt
 python3 verification/run_all.py
 ```
 
-The checks validate tensor derivatives, finite design moments and small-system measurement information, and exact Schur coefficients through independent algebraic and permutation formulas. The general measurement converse is established by the proof, not finite enumeration.
+The checks validate tensor derivatives, finite design moments and small-system measurement information, exact Schur coefficients through independent algebraic and permutation formulas, and continuous-Haar information through 35-digit Laplace integrals. The universal converse and eventual strict Haar comparison are established by the proofs, not finite enumeration.
 
 ## Scope
 
