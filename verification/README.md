@@ -1,6 +1,6 @@
 # Reproduce the scientific checks
 
-The analytical results are proved in the [two-copy readout](../science/two-copy-readout.md), [exact Haar comparison](../science/haar-pair-readout.md), [finite-block obstruction](../science/finite-block-obstruction.md), and [singular coefficient](../science/singular-information.md) accounts. The checks below target their tensor identities, normalization factors, design moments, branch integrals and finite coefficient calculations.
+The analytical results are proved in the [two-copy readout](../science/two-copy-readout.md), [exact Haar comparison](../science/haar-pair-readout.md), [finite-block obstruction](../science/finite-block-obstruction.md), [singular coefficient](../science/singular-information.md) and [copy-width crossover](../science/copy-width-crossover.md) accounts. The checks below target their tensor identities, normalization factors, design moments, branch integrals and finite coefficient calculations.
 
 ## Run
 
@@ -11,7 +11,7 @@ python3 -m pip install -r verification/requirements.txt
 python3 verification/run_all.py
 ```
 
-The runner executes all three scripts and fails if any check fails. It rewrites their JSON result files deterministically in the recorded environment. Floating-point diagnostics can vary slightly between numerical-library implementations; the scripts record their tolerances and check the actual identities and bounds.
+The runner executes all four scripts and fails if any check fails. It rewrites the three recorded JSON result files and includes the copy-width results in its terminal summary. Floating-point diagnostics can vary slightly between numerical-library implementations. The scripts state the tolerances they use to check the identities and bounds.
 
 Each script can also be run independently:
 
@@ -19,6 +19,7 @@ Each script can also be run independently:
 python3 experiments/verify_readout.py
 python3 experiments/check_schur.py
 python3 verification/verify_haar_pair.py
+python3 verification/verify_copy_width.py
 ```
 
 ## Two-copy readout
@@ -42,11 +43,19 @@ A second calculation explicitly sums permutation characters for three and four c
 
 The [recorded result](../experiments/results/schur.json) contains 30 Schur cases with $`k=1,\ldots,10`$ and $`\eta\in\{1/1000,1/10,1/4\}`$, plus 12 character-projector cases. Every comparison is an exact rational identity.
 
+## Copy-width crossover
+
+[verify_copy_width.py](verify_copy_width.py) uses the standard library. It independently enumerates words and inserts their letters into Young tableaux, then compares the resulting three-row probability and its derivative with a four-state subsequence recurrence. The 28 rational cases include both the rank-two boundary and positive rare populations. They also check the Taylor estimates used for growing blocks.
+
+The script checks the weak-qubit singular coefficient by counting the one-rare-letter weight outside the symmetric sector. A separate one-qubit Haar calculation checks that a regular readout can have positive Fisher information at positive rare population, with vanishing scaled information toward the pure boundary. Exact binomial sums check the count information, the weak-qubit chain-rule prefactor and the number of arrivals after the first one. A numerical Poisson sum recovers the limiting fraction.
+
+The recurrence evaluates the binary receiver on 1,000 and 10,000 copies at five values of $`k\eta`$ from $`0.01`$ to $`100`$. For 10,000 copies and $`k\eta=1`$, its fraction is about $`0.367798`$, approaching the limiting value $`0.367879`$. The standalone command prints the finite examples and their limiting values as JSON.
+
 ## What the checks establish
 
 These computations test formulas on which the analytical comparison depends. They do not prove compactness, almost-everywhere positivity, dominated convergence, or an assertion uniform over all POVMs. Those steps remain explicit in the written converse.
 
-The checks do not establish noise robustness, classical estimation complexity, or a simultaneous finite-$`p`$ scaling law. The small-system finite-design information is a diagnostic of the stated apparatus, not a numerical claim of optimality.
+The written crossover proof establishes the simultaneous limit. The finite examples check selected parameter paths and the apparatus probabilities. The small-system finite-design information is a diagnostic of the stated apparatus, not a numerical claim of optimality.
 
 ## Exact continuous-Haar comparison
 

@@ -50,7 +50,16 @@ A three-row sector requires all three eigenvector labels to occur among the copi
 
 For example, $`\beta_3=\eta(1-\eta)`$ and $`\beta_4=3\eta(1-\eta)`$. Dividing by $`k`$ gives the optimum worst-eigenbasis fraction of the leading singular information. The attaining binary Schur-sector test is independent of the eigenbasis.
 
-For fixed $`k`$, this fraction vanishes as $`\eta`$ tends to zero. For fixed $`\eta\gt 0`$, larger blocks can recover an increasing fraction of this particular leading spectral information. These statements refer to the coefficient after taking $`p\downarrow0`$. They do not give a uniform sample requirement at finite $`p`$.
+The [growing-block theorem](copy-width-crossover.md) makes the width requirement precise when $`p/\eta\to0`$. Write $`a=k\eta`$, the leading mean number of arrivals in the weak plane. For finite positive $`a`$, the best worst-basis fraction tends to
+
+```math
+g(a)=\frac{\mathbb E[(N-1)_+]}a,\qquad
+N\sim\operatorname{Pois}(a).
+```
+
+Even when the dominant direction is revealed, one uncalibrated weak arrival carries no leading information about how the weak-plane population splits between its two eigenvectors. With $`n`$ weak arrivals, the leading information is that of $`(n-1)_+`$ basis-resolved arrivals. A three-row Schur test on the original qutrits reaches the averaged fraction without basis information.
+
+For example, when $`\eta=10^{-3}`$ and $`p`$ is much smaller, the limiting half-information width is about 1,594 copies per block. This is an asymptotic design scale. The finite-$`p`$ Schur probability, total number of blocks, gate overhead and estimator risk are separate quantities.
 
 ## The coherent block is the constrained resource
 
@@ -84,6 +93,6 @@ The [exact Haar pair apparatus](haar-pair-readout.md) gives a complementary comp
 
 ## What is established
 
-The positive result gives one finite, state-independent apparatus for all regular rank-two models, including an unknown support and arbitrary positive eigenvalue ratio. The negative result shows that no fixed finite block retains a positive fraction uniformly over rank-three qutrit spectra and eigenbases. Its exact singular coefficient is attained, so the mechanism is more specific than failure of a chosen randomized measurement.
+The positive result gives one finite, state-independent apparatus for all regular rank-two models, including an unknown support and arbitrary positive eigenvalue ratio. The negative result shows that no fixed finite block retains a positive fraction uniformly over rank-three qutrit spectra and eigenbases. The exact singular coefficient is attained at fixed width. In the hierarchy of two shrinking weak eigenvalues, the growing-block argument gives both the necessary width and a measurement attaining the limiting scalar fraction.
 
 The rank promise and the fixed-apparatus premise remain part of this conclusion. The exact Haar comparison additionally addresses the opposing classically adaptive one-copy FI budget at rank two. Rank-changing boundary parametrizations, approximate-rank inputs, persistent coherent memory and finite-sample estimation require their own models. The classification identifies where bounded coherent processing alone can remove spectral conditioning from universal local readout.

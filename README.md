@@ -56,6 +56,19 @@ Only Schur sectors with three rows can retain the leading $`1/p`$ information. T
 
 The optimum worst-eigenbasis fraction tends to $`\beta_k(\eta)/k`$ as $`p\downarrow0`$ with $`k,\eta`$ fixed. A binary Schur-sector measurement attains this coefficient. For every fixed $`k`$, the fraction then tends to zero as $`\eta\downarrow0`$. This exact optimum concerns the displayed spectral tangent and the stated iterated limit.
 
+## How wide must a coherent block be?
+
+When the two smaller eigenvalues shrink with $`p/\eta\to0`$, the [growing-block theorem](science/copy-width-crossover.md) gives the optimal worst-basis fraction of Fisher information about $`p`$:
+
+```math
+R_k(\eta,p)\longrightarrow g(a)=1-\frac{1-e^{-a}}a,
+\qquad k\eta\to a\in(0,\infty).
+```
+
+The fraction tends to zero when $`k\eta\to0`$ and to one when $`k\eta\to\infty`$. Retaining half takes a coherent block of about $`1.594/\eta`$ copies in this limit. The three-row Schur test reaches the curve at finite positive $`a`$. The converse covers any block measurement, including an apparatus designed for the nominal spectrum.
+
+The crossover depends on how often the block encounters the other weak eigenstate. Even if the dominant eigenvector is supplied, the unknown basis in the weak plane costs one weak arrival in each nonempty block at leading order. The resulting Poisson average sets the limiting information fraction.
+
 ## Read the science
 
 | Question | Authoritative account |
@@ -64,7 +77,8 @@ The optimum worst-eigenbasis fraction tends to $`\beta_k(\eta)/k`$ as $`p\downar
 | How does the two-copy measurement work? | [Construction and complete proof](science/two-copy-readout.md) |
 | What does exact pair information say near a shrinking occupied eigenvalue? | [Haar pair readout and adaptive single-copy comparison](science/haar-pair-readout.md) |
 | Why does the converse cover every finite-block POVM? | [Finite-block obstruction](science/finite-block-obstruction.md) |
-| What information survives, and which measurement attains it? | [Exact singular coefficient](science/singular-information.md) |
+| What information survives at fixed block size? | [Exact singular coefficient](science/singular-information.md) |
+| How fast must the coherent block grow? | [Exact rank-three crossover](science/copy-width-crossover.md) |
 | What do block size, calibration and sensitivity mean operationally? | [Resource interpretation](science/interpretation.md) |
 | Which results and primitives are inherited? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | How are the finite identities reproduced? | [Verification](verification/README.md) |
@@ -73,7 +87,7 @@ The [LLM reading guide](llms.txt) maps questions to these sources.
 
 ## Learn the argument
 
-The learning route uses Demkowicz-Dobrzański, Górecki and Guţă's [*Multi-parameter estimation beyond Quantum Fisher Information*](https://arxiv.org/abs/2001.11742v2) as its single educational anchor, shared with Calibrated Quantum Readout. Begin with the [source-to-project bridge](learning/ANCHOR.md), then follow the [30-milestone map](learning/MILESTONES.md): 10 background milestones and 20 narrative milestones. The [learning entrypoint](learning/README.md) gives focused routes through the construction, converse and fully counted comparison.
+The learning route uses Demkowicz-Dobrzański, Górecki and Guţă's [*Multi-parameter estimation beyond Quantum Fisher Information*](https://arxiv.org/abs/2001.11742v2) as its single educational anchor, shared with Calibrated Quantum Readout. Begin with the [source-to-project bridge](learning/ANCHOR.md), then follow the [30-milestone map](learning/MILESTONES.md): 10 background milestones and 20 narrative milestones. The [learning entrypoint](learning/README.md) gives focused routes through the construction, converse, growing-block theorem and fully counted comparison.
 
 ## Reproduce the checks
 
@@ -84,11 +98,11 @@ python3 -m pip install -r verification/requirements.txt
 python3 verification/run_all.py
 ```
 
-The checks validate tensor derivatives, finite design moments and small-system measurement information, exact Schur coefficients through independent algebraic and permutation formulas, and continuous-Haar information through 35-digit Laplace integrals. The universal converse and eventual strict Haar comparison are established by the proofs, not finite enumeration.
+The checks validate tensor derivatives, finite design moments and small-system measurement information, exact Schur coefficients through independent algebraic and permutation formulas, continuous-Haar information through 35-digit Laplace integrals, and the three-row outcome probability and its derivative at growing block sizes. The Fisher limits and strict Haar comparison follow from the proofs.
 
 ## Scope
 
-The positive result concerns regular fixed-rank tangents and counts the full pair record. The converse constrains a fixed apparatus on independent coherent blocks. Learned calibration across blocks, persistent quantum memory, and global trace-distance reconstruction have different resources or losses. No uniform finite-$`p`$ remainder is claimed when the block size or the second eigenvalue changes.
+The positive result concerns regular fixed-rank tangents and counts the full pair record. The converse constrains a fixed apparatus on independent coherent blocks. Learned calibration across blocks, persistent quantum memory, and global trace-distance reconstruction have different resources or losses. The growing-block guarantee concerns the single spectral direction $`p`$ with $`p/\eta\to0`$. Finite-$`p`$ optimality of the binary measurement and simultaneous recovery of the full rank-three Fisher matrix remain open.
 
 ## Purpose and contact
 

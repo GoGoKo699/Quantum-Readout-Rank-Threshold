@@ -1,8 +1,8 @@
 # Thirty milestones for quantum readout, rank and calibration
 
-The map follows one scientific question: how much local state sensitivity can a complete measurement record preserve when the eigenbasis is unknown? It covers the rank classification and the precise comparison between learned single-copy calibration and a fixed two-copy apparatus.
+The map follows one scientific question. How much local state sensitivity can a complete measurement record preserve when the eigenbasis is unknown? It covers the rank classification, the coherent block width needed at rank three, and the comparison between learned single-copy calibration and a fixed two-copy apparatus.
 
-**M01–M10 are background/preliminaries.** They connect individual states, tangents, records and information metrics into the complete experiment. **M11–M30 are narrative/innovation.** They connect the rank-two construction, rank-three obstruction and exact Haar comparison into their physical and statistical scope. Ten foundational milestones suffice for the shared language; twenty narrative milestones retain the different proof mechanisms and their eventual synthesis. The allocation is determined by this project, not by a learner's prior knowledge.
+**M01–M10 are background/preliminaries.** They connect individual states, tangents, records and information metrics into the complete experiment. **M11–M30 are narrative/innovation.** They develop the rank-two construction, rank-three obstruction and width law, and exact Haar comparison.
 
 The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and Guţă, [*Multi-parameter estimation beyond quantum Fisher information*, arXiv:2001.11742v2](https://arxiv.org/html/2001.11742v2). Section references identify that version. The [anchor bridge](ANCHOR.md) maps its notation and explains the additional project-specific arguments. DDG20 supplies statistical foundations; the scientific pages supply design, wedge, Schur and exact-Haar proofs with their research attribution.
 
@@ -238,29 +238,29 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Source pointers.** DDG20 Sections 2.1–2.2 for the information framework; [uniform all-effect proof](../science/finite-block-obstruction.md).
 
-### M20: Computing and attaining the exact singular coefficient
+### M20: From the singular coefficient to growing-width achievability
 
-**Central question.** How much leading information survives in a fixed block?
+**Central question.** How does the same three-row Schur test retain information as the block grows?
 
-**Understanding target.** A word representation of Schur probabilities converts the derivative of the three-row event into a finite sum over suffixes. The result is $`\beta_k(\eta)=\sum_{m=0}^{k-1}[1-h_m(1-\eta,\eta)]`$. A binary measurement of those sectors attains this leading coefficient, with both outcomes and all $`k`$ inputs counted.
+**Understanding target.** A word representation of Schur probabilities converts the derivative of the three-row event into a finite sum over suffixes. The result is $`\beta_k(\eta)=\sum_{m=0}^{k-1}[1-h_m(1-\eta,\eta)]`$. For a fixed width the binary test attains this coefficient, with both outcomes and all $`k`$ inputs counted. At growing width the geometric sum gives $`\beta_k(\eta)/k\to g(a)=1-(1-e^{-a})/a`$ when $`k\eta\to a\in(0,\infty)`$. The product-law derivative bound controls the error of this replacement in the FI when $`p/\eta\to0`$.
 
-**Dependencies and story role.** Uses M04, M08 and M18–M19. It joins the constructive rank certificate with its matching upper bound.
+**Dependencies and story role.** Uses M04, M08 and M18–M19. It first matches the fixed-width upper bound, then follows the unchanged measurement into the growing-width regime.
 
-**Conceptual connection.** The coefficient describes a specific spectral tangent, rather than the full rank-three multiparameter optimum.
+**Conceptual connection.** The separate remainder estimate matters because the fixed-width singular coefficient alone gives no joint-limit FI guarantee.
 
-**Source pointers.** DDG20 Sections 2.1 and 2.10; [exact coefficient and small blocks](../science/singular-information.md).
+**Source pointers.** DDG20 Sections 2.1 and 2.10; [exact coefficient and small blocks](../science/singular-information.md); [growing-width achievability](../science/copy-width-crossover.md).
 
-### M21: The rank classification and its iterated limits
+### M21: The weak-plane converse and the width law
 
-**Central question.** Which uniform statements follow from the positive and negative arguments?
+**Central question.** Why does the three-row test give the optimal limiting fraction over unknown bases?
 
-**Understanding target.** Pure-state tangents need one copy; arbitrary rank-two moving-support models admit a two-copy constant; all rank-three qutrit spectra admit no fixed finite-block constant. The exact converse fixes block size and the second eigenvalue, sends the rare eigenvalue to zero, then shrinks the second eigenvalue. It supplies no simultaneous-limit finite remainder.
+**Understanding target.** Reveal the dominant ray for the upper bound and keep a strong-or-weak flag for each copy. At fixed weak-copy count $`n`$, the unknown weak basis limits the leading coefficient to $`(n-1)_+`$. After controlling the arrival-count tail, the Poisson limit gives $`\mathbb E[(N-1)_+]/a=g(a)`$. Together with M20, this gives the optimal fraction for the rare-eigenvalue tangent. Independent block repetition controls the endpoints $`k\eta\to0`$ and $`k\eta\to\infty`$.
 
-**Dependencies and story role.** Uses M11–M20. It integrates the first two mechanisms into the original classification.
+**Dependencies and story role.** Uses M04–M08 and M17–M20. It turns the fixed-block obstruction into a width law in the hierarchy $`p/\eta\to0`$.
 
-**Conceptual connection.** The ensuing calibration comparison changes the supplied information and adaptation resources while retaining precise local FI normalization.
+**Conceptual connection.** The minimum width for half the scalar QFI scales as $`1.593624260\ldots/\eta`$. The next milestones study the charged calibration record in rank two.
 
-**Source pointers.** DDG20 Sections 2.10–2.11; [model classification](../science/model.md); [interpretation](../science/interpretation.md).
+**Source pointers.** DDG20 Sections 2.1 and 2.10–2.11; [worked block width](ANCHOR.md#worked-example-of-the-rank-three-block-width); [growing-width converse](../science/copy-width-crossover.md).
 
 ### M22: Calibrated and adaptive single-copy ceilings
 
@@ -342,7 +342,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Dependencies and story role.** Uses M22 and M26–M27. It integrates exact information and the inherited support budget into the comparison theorem.
 
-**Conceptual connection.** The result needs no crossover law, but it leaves the explicit boundary threshold and sharp finite-design performance unquantified.
+**Conceptual connection.** The argument proves strictness through the weak-class integral. The explicit Haar boundary threshold and sharp finite-design performance remain unquantified.
 
 **Source pointers.** DDG20 Sections 2.10–2.11 for interpretation; [strict Haar separation](../science/haar-pair-readout.md).
 
@@ -350,7 +350,7 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Central question.** How far can an information separation be turned into an estimation claim?
 
-**Understanding target.** The comparison counts all inputs and the full seven-dimensional local tangent. It proves neither finite-sample risk dominance nor a universally optimal two-copy constant. Classical estimation complexity, finite control errors, compound basis errors and global loss require further models. The rank-three converse still concerns fixed apparatuses and its specified iterated limit.
+**Understanding target.** The Haar comparison counts all inputs and the full seven-dimensional local tangent. The rank-three iterated and simultaneous limits both concern one spectral direction and a fixed apparatus at each width. Finite-sample risk, classical estimation complexity, finite control errors, compound basis errors and global loss require further analysis.
 
 **Dependencies and story role.** Uses M06–M10, M21 and M23–M28. It relates the proved results to the statistical tasks that motivate them.
 
@@ -362,10 +362,10 @@ The single educational anchor is **DDG20**, Demkowicz-Dobrzański, Górecki and 
 
 **Central question.** How do rank, calibration and coherent processing jointly determine the supported result?
 
-**Understanding target.** The full story combines a rank-two conditional-purity mechanism, a rank-three rare-sector obstruction, exact input accounting and a near-boundary Haar separation from adaptive one-copy readout. Each result retains its own state promise, apparatus, tangent space and limit order. The educational framework and inherited ingredients remain distinct from the project-supplied derivations.
+**Understanding target.** Pure-state sensitivity has an established one-copy baseline. The rank-two conditional-purity mechanism yields a uniform two-copy guarantee. Rank three defeats any fixed width uniformly, and its rare-eigenvalue direction follows the quantitative width law near the boundary. The exact Haar comparison gives a separate rank-two separation from adaptive one-copy readout with all inputs counted.
 
 **Dependencies and story role.** Uses the entire narrative phase. This final synthesis connects the local objects to the global scientific contribution.
 
 **Conceptual connection.** One can now choose the correct theorem for a declared experiment and identify which missing resource or statistical premise blocks a stronger inference.
 
-**Source pointers.** DDG20 Sections 2.10–2.11 and 4.5; [model](../science/model.md); [Haar proof](../science/haar-pair-readout.md); [related work](../references/RELATED_WORK.md).
+**Source pointers.** DDG20 Sections 2.10–2.11 and 4.5; [model](../science/model.md); [width law](../science/copy-width-crossover.md); [Haar proof](../science/haar-pair-readout.md); [related work](../references/RELATED_WORK.md).

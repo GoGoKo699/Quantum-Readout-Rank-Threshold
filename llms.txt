@@ -8,7 +8,7 @@ This repository studies how many identical copies a fixed measurement must proce
 - Complete common understanding map, M01–M30, with dependencies and source pointers: learning/MILESTONES.md
 - Reader entrypoint and focused routes: learning/README.md
 
-The single educational anchor is Demkowicz-Dobrzanski, Gorecki and Guta, Multi-parameter estimation beyond Quantum Fisher Information, J. Phys. A 53, 363001 (2020), arXiv:2001.11742v2, shared with Calibrated-Quantum-Readout. It supplies score, SLD, nuisance and collective-estimation foundations; the project supplies the fixed-rank design, Schur and exact Haar arguments. The 30-milestone map has 10 background and 20 narrative milestones and records conceptual targets rather than a reader's assessment history.
+The single educational anchor is Demkowicz-Dobrzanski, Gorecki and Guta, Multi-parameter estimation beyond Quantum Fisher Information, J. Phys. A 53, 363001 (2020), arXiv:2001.11742v2, shared with Calibrated-Quantum-Readout. It supplies score, SLD, nuisance and collective-estimation foundations. The project supplies the fixed-rank design, Schur, coherent-width and exact Haar arguments. The 30-milestone map has 10 background and 20 narrative milestones.
 
 ## Read by question
 
@@ -17,13 +17,14 @@ The single educational anchor is Demkowicz-Dobrzanski, Gorecki and Guta, Multi-p
 - Exact continuous-Haar pair information for all seven rank-two qutrit tangent directions, strict near-boundary comparison with the adaptive one-copy ceiling, and its implementation limits: science/haar-pair-readout.md
 - Arbitrary-outcome finite-block converse, Schur multiplicities and uniform normalized-effect argument: science/finite-block-obstruction.md
 - Exact leading spectral-information coefficient, attaining binary measurement and limit order: science/singular-information.md
+- Growing coherent block width, three-row Schur achievability, dominant-ray upper bound and half-information width: science/copy-width-crossover.md
 - Calibration, coherent block size, persistent memory and local versus global loss: science/interpretation.md
 - Primary antecedents and matched comparisons: references/RELATED_WORK.md
 - Bibliographic metadata: references/references.bib
 - Executed finite checks, dependencies and boundaries: verification/README.md
 
-Use the source definitions: J is single-copy SLD information, J_2=2J, and all input copies and measurement outcomes are charged. The exact rank-three minimax coefficient concerns one spectral tangent after taking the rare eigenvalue to zero with block size and the second eigenvalue fixed. Distinguish this from general finite-sample estimation or adaptive calibration.
+Use the source definitions. J is single-copy SLD information, J_2=2J, and all input copies and measurement outcomes are charged. For the rank-three scalar tangent, the fixed-width coefficient takes p to zero with k and eta fixed. The growing-width limit takes eta to zero with p/eta tending to zero and k eta tending to a, giving the optimal fraction 1-(1-exp(-a))/a for 0<a<infinity, extended continuously to the endpoints. Half information has leading block width 1.593624260.../eta. The local scalar theorem leaves full-matrix and finite-sample risk questions open.
 
-For a connected account, start at README.md and science/README.md, then follow the model, finite-design construction, exact Haar comparison, converse, singular-coefficient calculation and interpretation. For reproduction, run the commands in verification/README.md. Finite numerical checks support the displayed identities; the general statements rely on the written proofs.
+For a connected account, start at README.md and science/README.md, then follow the model, finite-design construction, exact Haar comparison, finite-block converse, singular-coefficient calculation, coherent-width theorem and interpretation. The general statements rely on the written proofs. Run the finite checks in verification/README.md.
 
 The sister Calibrated-Quantum-Readout repository owns the calibrated single-copy optimum and science/paid-calibration.md, which analyzes complete pilot transcripts and separate strong/weak eigenvector errors. This repository owns the exact Haar pair comparison. Its full-model fraction is greater than one quarter sufficiently near the rank-one boundary, tending to one quarter; no sharp finite-Clifford constant, universal paid-calibration crossover or finite-sample risk ordering is asserted. Scientific counterpart: https://github.com/GoGoKo699/Calibrated-Quantum-Readout/blob/67071bb77deb232a02d48968d7c52adfd817f367/science/paid-calibration.md .

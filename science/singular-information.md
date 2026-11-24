@@ -257,7 +257,7 @@ Since $`\beta_k=k-\sum_{m=0}^{k-1}h_m`$, this yields
 
 An increasing block can therefore recover the full leading singular coefficient at a fixed second eigenvalue. A fixed block loses its uniform fraction when that second eigenvalue also becomes small.
 
-These are iterated-limit statements. They do not provide a remainder uniform in $`k`$ or $`\eta`$, and they are not a matched finite-$`p`$ copy-complexity law.
+These statements take $`p\downarrow0`$ first. The [growing-block proof](copy-width-crossover.md) controls the Schur probability and its derivative as $`k`$, $`\eta`$, and $`p`$ change together. It establishes the exact simultaneous limit when $`p/\eta\to0`$.
 
 ## 5. Exact finite checks
 
@@ -281,5 +281,5 @@ Here $`s_{(r,s)}(a,b)=\sum_{j=0}^{r-s}a^{r-j}b^{s+j}`$. This provides an algebra
 - The binary-suffix formula and its positive recurrence form.
 - Explicit permutation-character projectors for the three- and four-copy examples.
 
-The [recorded checks](../experiments/results/schur.json) cover 30 Schur cases with $`1\le k\le10`$ and $`\eta\in\{1/1000,1/10,1/4\}`$, plus 12 character-projector cases at the boundary and at positive $`p`$. All comparisons are exact rational identities. These checks test the representation multiplicities, derivatives, and normalization factors. They do not replace the uniform all-POVM proof or establish an unproved simultaneous limit.
+The [recorded checks](../experiments/results/schur.json) cover 30 Schur cases with $`1\le k\le10`$ and $`\eta\in\{1/1000,1/10,1/4\}`$, plus 12 character-projector cases at the boundary and at positive $`p`$. All comparisons are exact rational identities. These checks test the representation multiplicities, derivatives, and normalization factors. The [fixed-block converse](finite-block-obstruction.md) and the [growing-block theorem](copy-width-crossover.md) supply the respective asymptotic upper bounds.
 
