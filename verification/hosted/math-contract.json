@@ -95,6 +95,27 @@
         "0<b<b0",
         "lim"
       ]
+    },
+    {
+      "path": "science/copy-width-crossover.md",
+      "index": 14,
+      "source_sha256": "e370b53ede2118cf71fecbb9e470a82a4f72d1f0d09cf49dcd436ae49bd9f12a",
+      "required_text": [
+        "Rk(\u03b7,p)",
+        "g(a)=1\u22121\u2212e\u2212aa",
+        "g(0)=0",
+        "g(\u221e)=1"
+      ]
+    },
+    {
+      "path": "science/copy-width-crossover.md",
+      "index": 131,
+      "source_sha256": "fb6339d75a188c2c4f26e438d596067c30ffcc2ff7f6617bb609e9949aa10db0",
+      "required_text": [
+        "E[CN(q)]",
+        "E[(Z\u22121)+]",
+        "a\u22121+e\u2212a"
+      ]
     }
   ]
 }

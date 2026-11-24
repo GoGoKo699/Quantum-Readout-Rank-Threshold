@@ -14,12 +14,12 @@ Use **arXiv:2001.11742v2, 1 September 2020**: [version record](https://arxiv.org
 | [2.1](https://arxiv.org/html/2001.11742v2#S2.SS1) | Scores, Fisher matrices and classical covariance bounds | Complete branch and adaptive records |
 | [2.2](https://arxiv.org/html/2001.11742v2#S2.SS2) | SLD information and the measurement bound | Single-copy metric and its tensor-product normalization |
 | [2.7](https://arxiv.org/html/2001.11742v2#S2.SS7) | Estimation with nuisance parameters | Full-model comparison when the eigenbasis is unknown |
-| [2.10–2.11](https://arxiv.org/html/2001.11742v2#S2.SS10) | Multiple copies and saturability | Coherent blocks, information retention and estimator scope |
+| [2.10–2.11](https://arxiv.org/html/2001.11742v2#S2.SS10) | Multiple copies and saturability | Coherent block width, information retention and estimator scope |
 | [3.1](https://arxiv.org/html/2001.11742v2#S3.SS1) | Concrete qubit estimation models | Why an unknown moving rank-two support adds directions |
 | [4.5](https://arxiv.org/html/2001.11742v2#S4.SS5) | Localization, asymptotic strategies and applicability | Supplied calibration versus a paid pilot |
 | [4.6.3](https://arxiv.org/html/2001.11742v2#S4.SS6.SSS3) | The full-rank scope of the general QLAN treatment | A boundary on what can be imported into this rank-deficient problem |
 
-The [30-milestone map](MILESTONES.md) connects these foundations to the finite-design theorem, the rank-three obstruction and the exact Haar comparison. The allocation and sequence follow the scientific argument rather than the review's table of contents.
+The [30-milestone map](MILESTONES.md) connects these foundations to the finite-design theorem, the rank-three obstruction and width crossover, and the exact Haar comparison.
 
 ## Notation translation
 
@@ -111,10 +111,26 @@ The inherited single-copy support-information budget applies separately to each 
 
 For a rank-three qutrit with eigenvalues $`1-\eta-p,\eta,p`$, the fully antisymmetric three-copy outcome has probability $`w_3=(1-\eta-p)\eta p`$. At fixed $`\eta\gt0`$ its binary information is $`\eta(1-\eta)/p+O(1)`$, while the three-copy QFI is $`3/p+O(1)`$. Thus its limiting fraction is $`\eta(1-\eta)/3`$.
 
-The rare outcome retains a divergent information term, but its coefficient contains the second weak population. For arbitrary fixed blocks, the [Schur-sector calculation](../science/singular-information.md) gives the exact coefficient $`\beta_k(\eta)`$. The [all-POVM converse](../science/finite-block-obstruction.md) proves that the other sectors cannot supply a leading term uniformly over unknown bases and measurement effects. Fixed $`k,\eta`$ come first, then $`p\downarrow0`$, then $`\eta\downarrow0`$. No finite-$`p`$ uniform remainder is inferred when those quantities change together.
+The rare outcome retains a divergent information term, and its coefficient contains the second weak population. For arbitrary fixed blocks, the [Schur-sector calculation](../science/singular-information.md) gives the exact coefficient $`\beta_k(\eta)`$. The [all-POVM converse](../science/finite-block-obstruction.md) proves that the other sectors cannot supply a leading term uniformly over unknown bases and measurement effects. The order here fixes $`k,\eta`$, takes $`p\downarrow0`$, and then shrinks $`\eta`$. Jointly changing these quantities needs a separate argument.
+
+## Worked example of the rank-three block width
+
+Take a sequence of qutrit states with $`\eta\downarrow0`$ and $`p/\eta\to0`$. The receiver uses one fixed POVM on each block of $`k`$ copies, with no knowledge of the eigenbasis. Use the score from [DDG20 Section 2.1](https://arxiv.org/html/2001.11742v2#S2.SS1) for the local derivative in $`p`$ at fixed $`\eta`$. Divide its classical FI by $`kJ_p`$, where $`J_p=1/p+1/(1-\eta-p)`$ is the single-copy SLD information. This follows the copy normalization in [DDG20 Section 2.10](https://arxiv.org/html/2001.11742v2#S2.SS10).
+
+When $`k\eta\to1`$, a block contains about one copy from the weak two-dimensional sector on average. Given $`n`$ weak copies, averaging over the unknown weak basis leaves the optimal leading coefficient $`(n-1)_+`$. With a Poisson mean of one, the expected coefficient is $`e^{-1}`$. For a Poisson variable $`N`$ of general mean $`a>0`$,
+
+```math
+\frac{\mathbb E[(N-1)_+]}{a}
+=\frac{\mathbb E[N]-\Pr(N\ge1)}{a}
+=1-\frac{1-e^{-a}}{a}.
+```
+
+The upper bound grants the receiver the dominant ray and the weak-copy flags. The attaining receiver tests for a three-row Schur diagram on the whole qutrit block. In its word representation, a third-row event needs a rare letter followed later by a second-eigenvalue letter and then a dominant letter. The [width proof](../science/copy-width-crossover.md) controls this event when the block grows and shows that its binary record reaches the same limiting fraction.
+
+For half of the scalar QFI, the positive solution of $`1-e^{-a}=a/2`$ is $`a=1.593624260\ldots`$, giving a leading block width of $`1.593624260\ldots/\eta`$. Here $`p`$ sets the diverging QFI, while $`\eta`$ sets the width. This example uses the rare-eigenvalue tangent and the hierarchy $`p/\eta\to0`$.
 
 ## Where the anchor ends and the project begins
 
 DDG20 supplies scores, SLD bounds, nuisance handling, multiple-copy comparisons and a careful account of asymptotic applicability. Its Section 4.6.3 treats general finite-dimensional QLAN under full-rank assumptions; it does not establish a moving-support rank-deficient pilot result or uniformity as an occupied eigenvalue shrinks.
 
-The project supplies the exact-rank conventions, finite-design bound, rank-two wedge mechanism, arbitrary-POVM rank-three obstruction, exact singular coefficient and continuous-Haar pair comparison. Primary research attribution is in [Related work](../references/RELATED_WORK.md). The [milestones](MILESTONES.md) organize these steps without identifying FI preservation with estimator attainability.
+The project supplies the exact-rank conventions, finite-design bound, rank-two wedge mechanism, arbitrary-POVM rank-three obstruction, exact singular coefficient, coherent-width law and continuous-Haar pair comparison. Primary research attribution is in [Related work](../references/RELATED_WORK.md). The [milestones](MILESTONES.md) connect these FI guarantees to the distinct question of estimator attainability.

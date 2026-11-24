@@ -150,9 +150,21 @@ The upper bound holds for arbitrary POVM outcome spaces, with uniformity over no
 
 For any fixed $`k`$, choosing $`\eta`$ sufficiently small and then $`p`$ sufficiently small defeats every proposed uniform positive fraction. This already occurs in a fixed three-dimensional Hilbert space.
 
-The [arbitrary-POVM proof](finite-block-obstruction.md) explains why regular Schur sectors cannot retain a leading $`1/p`$ contribution after averaging over the unknown eigenbasis. The [singular-information account](singular-information.md) derives the exact coefficient, its attaining measurement and its small-block examples. The order of limits is part of the result; it is not a uniform finite-$`p`$ estimate when the block size also changes.
+The [arbitrary-POVM proof](finite-block-obstruction.md) explains why regular Schur sectors cannot retain a leading $`1/p`$ contribution after averaging over the unknown eigenbasis. The [singular-information account](singular-information.md) derives the exact coefficient, its attaining measurement and its small-block examples. Theorem 2 takes its limits at fixed block size.
 
-## 5. Classification and provenance
+## 6. The growing-block crossover
+
+**Theorem 3.** Along every sequence with $`\eta\to0`$, $`p/\eta\to0`$, and $`k\eta\to a`$ in the extended nonnegative reals, the scalar efficiency in Theorem 2 satisfies
+
+```math
+R_k(\eta,p)\longrightarrow g(a),\qquad
+g(a)=1-\frac{1-e^{-a}}a\quad(0\lt a\lt\infty),
+\qquad g(0)=0,\quad g(\infty)=1.
+```
+
+Both the nominal-parameter allowance and the full-record convention remain in force. At finite positive $`a`$, a binary three-row Schur measurement attains the limit. The converse allows every block POVM. Its proof bounds the information at each fixed number of weak-plane arrivals before taking the Poisson limit. The [complete proof](copy-width-crossover.md) gives the uniform estimate needed for the simultaneous limit, the endpoint arguments, and the block-width requirement for any target fraction in $`(0,1)`$.
+
+## 7. Classification and provenance
 
 | Promised family | Minimum fixed coherent block | Uniform local SLD-Fisher fraction |
 |---|---:|---|
@@ -162,8 +174,8 @@ The [arbitrary-POVM proof](finite-block-obstruction.md) explains why regular Sch
 
 One-copy impossibility for rank-two models follows already from the unknown-basis qubit family approaching a pure state, as shown in the [converse account](finite-block-obstruction.md). Thus two is necessary as well as sufficient for the stated universal task. The pure-state 3-design result and exact collective qubit readout are established antecedents [ZC26, ZH18](../references/RELATED_WORK.md).
 
-The new classification concerns unknown moving rank-two supports and arbitrary fixed blocks at rank three. SWAP sectors, Clifford designs and Schur rank certificates are standard ingredients. The [related-work account](../references/RELATED_WORK.md) states the inherited results and compares matching assumptions and losses.
+The classification concerns unknown moving rank-two supports and arbitrary fixed blocks at rank three. The growing-block result gives a sharp width law for the rare-eigenvalue direction in the stated rank-three hierarchy. SWAP sectors, Clifford designs and Schur rank certificates are standard ingredients. The [related-work account](../references/RELATED_WORK.md) states the inherited results and compares matching assumptions and losses.
 
-## 6. Reading route
+## 8. Reading route
 
-Read [two-copy readout](two-copy-readout.md) for the construction, [finite-block obstruction](finite-block-obstruction.md) for the converse, and [singular information](singular-information.md) for the exact coefficient and its meaning. The [resource interpretation](interpretation.md) connects these statements to calibration, repeated experiments and other estimation objectives. [Verification](../verification/README.md) gives the executed finite checks and their analytical limits.
+Read [two-copy readout](two-copy-readout.md) for the construction, [finite-block obstruction](finite-block-obstruction.md) for the converse, and [singular information](singular-information.md) for the exact fixed-width coefficient. The [growing-block crossover](copy-width-crossover.md) determines how many copies per block retain a chosen share of the rare-eigenvalue information. The [resource interpretation](interpretation.md) connects these statements to calibration, repeated experiments and other estimation objectives. [Verification](../verification/README.md) gives the executed finite checks and their analytical limits.

@@ -304,7 +304,7 @@ The qubit and qutrit counterexamples also apply in larger ambient spaces: restri
 
 ## Scope of the conclusion
 
-The argument concerns local SLD information at positive $`p`$. It uses no Cramér–Rao inference at the singular boundary $`p=0`$. It excludes a uniform constant for every fixed finite $`k`$, rather than deriving a joint-limit rate in $`k`$, $`\eta`$, and $`p`$.
+The argument concerns local SLD information at positive $`p`$. It uses no Cramér–Rao inference at the singular boundary $`p=0`$. It excludes a uniform constant for every fixed finite $`k`$. The [growing-block theorem](copy-width-crossover.md) supplies a separate argument for the simultaneous regime $`\eta\to0`$, $`p/\eta\to0`$.
 
 The [exact coefficient](singular-information.md) describes what survives for the displayed eigenvalue tangent. The [interpretation](interpretation.md) distinguishes this local criterion from trace-norm reconstruction, adaptive calibration, and persistent quantum-memory protocols.
 

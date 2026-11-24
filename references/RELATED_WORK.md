@@ -33,17 +33,25 @@ Zhang, Wang, and Ying give a semi-unambiguous rank measurement by Young-diagram 
 
 The additional converse step shows that sectors already populated at the rank-two boundary contribute no leading $`1/p`$ Fisher information after averaging over the eigenbasis. Uniformity over trace-normalized positive effects covers continuous outcomes and nominal-spectrum-dependent designs. The surviving three-row contribution requires both weak eigenvalue directions. The rank-testing result alone does not establish this all-POVM Fisher reduction.
 
+### Growing blocks and the rare spectral direction
+
+For the qutrit spectrum $`(1-\eta-p,\eta,p)`$, the [growing-block result](../science/copy-width-crossover.md) determines the normalized Fisher information about $`p`$ when $`p/\eta\to0`$ and $`k\eta`$ stays finite. The three-row Schur bit and the random-word description remain inherited from rank testing [OW15](#ow15). The Taylor bound on the word probability and its derivative makes their coefficient usable along the simultaneous limit.
+
+[Gardner et al.](#gardneretal26), Proposition 2, optimize the testing errors of invariant composite hypotheses. Averaging the testing effect over orientations preserves its inference task. Local Fisher information can change when the orientation label of a randomized apparatus is discarded. The present converse retains full records and bounds arbitrary POVMs through a fixed-number weak-qubit information bound before averaging over Poisson arrivals.
+
+[Pelecanos, Spilecki and Wright](#psw25), Theorem 8.1, give a sufficient width governed by the smallest positive eigenvalue for a locally unbiased multiparameter covariance guarantee. Here $`p`$ sets the divergent quantum information, while $`\eta`$ sets the coherent width for retaining a specified fraction in this one direction. The multiparameter guarantee, global risk and the regime of comparable weak eigenvalues remain distinct questions.
+
 ## Why the objectives and limits matter
 
 **Local information and reconstruction error.** Trace distance gives a small absolute cost to a sufficiently small eigenvalue error, whereas the local SLD information for a rare population grows as $`1/p`$. Thus the bounded-block trace-norm rate of [NZ26](#nz26) does not imply the uniform Fisher guarantee studied here.
 
-**Fixed and growing blocks.** The guarantee of [PSW25](#psw25) allows the block to grow as a spectral scale vanishes. The converse here uses iterated local limits at fixed block size; its asymptotic coefficient is not a matched finite-$`p`$ complexity theorem.
+**Fixed and growing blocks.** The guarantee of [PSW25](#psw25) allows the block to grow as a spectral scale vanishes. The fixed-block converse uses iterated local limits. The growing-block theorem gives a matched simultaneous limit for the rare-eigenvalue direction when the two weak eigenvalues separate in scale.
 
 **Block size and working memory.** The two-copy working memory in [GardnerEtAl26](#gardneretal26) can retain a coherent target through many interactions. Its size does not bound how many copies contribute coherently to the final measurement. Adaptive basis learning likewise changes the calibration available to the apparatus.
 
 ## Contribution and priority boundary
 
-The contribution is the rank-two/rank-three boundary for uniform local information recovery under the stated architecture, together with the [exact Haar pair comparison](../science/haar-pair-readout.md) at a shrinking rank-two qutrit eigenvalue. The symmetry measurements, designs, and rank certificates are inherited. The claim is neither exact Fisher symmetry nor optimality of the finite-design constant. The matched comparisons support these specific additions; they are not an exhaustive certification of publication priority.
+The contribution is the rank-two/rank-three boundary for uniform local information recovery, the [exact rank-three coherent-width crossover](../science/copy-width-crossover.md) for the separated rare-eigenvalue direction, and the [exact Haar pair comparison](../science/haar-pair-readout.md) at a shrinking rank-two qutrit eigenvalue. The symmetry measurements, designs, and rank certificates are inherited. The claim is neither exact Fisher symmetry nor optimality of the finite-design constant. The matched comparisons support these specific additions; they are not an exhaustive certification of publication priority.
 
 ## Calibration and the exact Haar comparison
 
