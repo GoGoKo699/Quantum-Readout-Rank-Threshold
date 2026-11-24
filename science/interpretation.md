@@ -54,7 +54,7 @@ The [growing-block theorem](copy-width-crossover.md) makes the width requirement
 
 ```math
 g(a)=\frac{\mathbb E[(N-1)_+]}a,\qquad
-N\sim\operatorname{Pois}(a).
+N\sim\mathrm{Pois}(a).
 ```
 
 Even when the dominant direction is revealed, one uncalibrated weak arrival carries no leading information about how the weak-plane population splits between its two eigenvectors. With $`n`$ weak arrivals, the leading information is that of $`(n-1)_+`$ basis-resolved arrivals. A three-row Schur test on the original qutrits reaches the averaged fraction without basis information.
